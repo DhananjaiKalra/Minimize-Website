@@ -7,6 +7,25 @@
   Author:  ex-nihilo
   Version: 1.0
 */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 #overlay22 {
   position: absolute;
 
@@ -21,191 +40,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: red;
+  background-color: transparent;
   /* Black background with opacity */
-  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  z-index: 111;
   /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer;
   /* Add a pointer on hover */
 }
 
-@keyframes fly-in {
-  0% {
-    transform: rotateY(540deg) rotateX(1080deg) translateZ(400px) translateX(80px) translateY(0);
-  }
-
-  40% {
-    transform: rotateY(0deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
-  }
-
-  60% {
-    transform: rotateY(90deg) rotateX(0) translateZ(0) translateX(100px) translateY(80vh);
-  }
-
-  80% {
-    transform: rotateY(180deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
-  }
-
-  100% {
-    transform: rotateY(0) rotateX(0) translateZ(0) translateX(0) translateY(0);
-  }
-}
-
-.card-holder {
-  animation-name: fly-in;
-  animation-duration: 7s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-.card-holder:nth-of-type(1) {
-  animation-delay: .5s;
-}
-
-.card-holder:nth-of-type(2) {
-  animation-delay: 1s;
-}
-
-.card-holder:nth-of-type(3) {
-  animation-delay: 1.5s;
-}
-
-.card-holder:nth-of-type(4) {
-  animation-delay: 2s;
-}
-
-.card-holder:nth-of-type(5) {
-  animation-delay: 2.5s;
-}
-
-.card-holder:nth-of-type(6) {
-  animation-delay: 3s;
-}
-
-.card-holder:nth-of-type(7) {
-  animation-delay: 3.5s;
-}
-
-.card-holder:nth-of-type(8) {
-  animation-delay: 4s;
-}
-
-.card-holder:nth-of-type(9) {
-  animation-delay: 4.5s;
-}
-
-.card-holder:nth-of-type(10) {
-  animation-delay: 5s;
-}
-
-/* 
-body {
-  background: #000;
-  padding: 4% 10%;
-  perspective: 400px;
-  overflow-x: hidden;
-} */
-
-.card-holder {
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  position: relative;
-  width: 90px;
-  height: 130px;
-  display: inline-block;
-  /* box-shadow: 1px 2px 2px rgba(0, 0, 0, .4); */
-  margin: 12px;
-  padding: 0px;
-}
-
-.card-holder:hover {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
-}
-
-.card-holder:active {
-  transform: scale(.9);
-}
-
-.back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  background: #36c;
-  background:
-    linear-gradient(135deg, #f26c32 0%, #c146a1 50%, #a80077 51%, #f9703e 100%);
-  border-radius: 2%;
-
-  display: block;
-  border: 1px solid black;
-}
-
-.card {
-
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  backface-visibility: hidden;
-  background-color: transparent;
-  border-radius: 2%;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
-}
-
-.card:after {
-  backface-visibility: hidden;
-  position: absolute;
-  display: block;
-  content: '';
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-  width: 100%;
-  height: 100%;
-}
-
-
-.card.hearts:after,
-.card.hearts:before {
-  background-image:
-    url('aaa.png');
-  background-size: 100%;
-
-}
-
-.card.clubs:after,
-.card.clubs:before {
-
-
-  background-image:
-    url('aaa.png');
-  background-size: 100%;
-}
-
-.card.diamonds:after,
-.card.diamonds:before {
-  background-image:
-    url('aaa.png');
-  background-size: 100%;
-}
-
-.card.spades:after,
-.card.spades:before {
-
-  background-image:
-    url('aaa.png');
-  background-size: 100%;
-}
 
 /*
   1. TEMPLATE BACKGROUNDS
@@ -297,6 +139,8 @@ body {
 /* 1.2. single IMG BACKGROUND */
 .bg-img-SINGLE {
   background-image: url(../images/background-SINGLE-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-img-about {
@@ -686,15 +530,15 @@ strong {
 /* 4. upper page */
 .upper-page {
   position: relative;
-
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   left: 0;
   top: 0;
   margin: 0;
-  background-image: url('../images/background-SINGLE-bg.png');
+  /* background-image: url('../images/background-SINGLE-bg.png');
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: auto; */
 
   /* background-image: linear-gradient(to bottom right, #004c4c, #708090, #36454f, #111111); */
 }
@@ -769,19 +613,19 @@ background-imagebackground-imagebackground-image .center-container-contact-modal
 
 /* 6. hero container */
 .hero-fullscreen {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 0;
 }
 
 
 /* 6.1. hero bg */
 .hero-bg {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   height: 100%;
   background-color: red;
