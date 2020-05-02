@@ -17,26 +17,211 @@
     <link href="css/css-style.css" media="all" rel="stylesheet" type="text/css">
     <!-- style end -->
     <!-- google fonts start -->
-    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CMontserrat:400,700%7CPoppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" type="text/css">
+    <link
+        href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CMontserrat:400,700%7CPoppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" type="text/css">
     <!-- google fonts end -->
+    <style>
+        @keyframes fly-in {
+            0% {
+                transform: rotateY(540deg) rotateX(1080deg) translateZ(400px) translateX(80px) translateY(0);
+            }
+
+            40% {
+                transform: rotateY(0deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
+            }
+
+            60% {
+                transform: rotateY(90deg) rotateX(0) translateZ(0) translateX(100px) translateY(80vh);
+            }
+
+            80% {
+                transform: rotateY(180deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
+            }
+
+            100% {
+                transform: rotateY(0) rotateX(0) translateZ(0) translateX(0) translateY(0);
+            }
+        }
+
+        .card-holder {
+            animation-name: fly-in;
+            animation-duration: 7s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .card-holder:nth-of-type(1) {
+            animation-delay: .5s;
+        }
+
+        .card-holder:nth-of-type(2) {
+            animation-delay: 1s;
+        }
+
+        .card-holder:nth-of-type(3) {
+            animation-delay: 1.5s;
+        }
+
+        .card-holder:nth-of-type(4) {
+            animation-delay: 2s;
+        }
+
+        .card-holder:nth-of-type(5) {
+            animation-delay: 2.5s;
+        }
+
+        .card-holder:nth-of-type(6) {
+            animation-delay: 3s;
+        }
+
+        .card-holder:nth-of-type(7) {
+            animation-delay: 3.5s;
+        }
+
+        .card-holder:nth-of-type(8) {
+            animation-delay: 4s;
+        }
+
+        .card-holder:nth-of-type(9) {
+            animation-delay: 4.5s;
+        }
+
+        .card-holder:nth-of-type(10) {
+            animation-delay: 5s;
+        }
+
+        /* 
+      body {
+        background: #000;
+        padding: 4% 10%;
+        perspective: 400px;
+        overflow-x: hidden;
+      } */
+
+        .card-holder {
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            position: relative;
+            width: 90px;
+            height: 130px;
+            display: inline-block;
+            /* box-shadow: 1px 2px 2px rgba(0, 0, 0, .4); */
+            border: none;
+            margin: 12px;
+            margin-top: 20%;
+            padding: 0px;
+        }
+
+        .card-holder:hover {
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+        }
+
+        .card-holder:active {
+            transform: scale(.9);
+        }
+
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background: #36c;
+            background:
+                linear-gradient(135deg, #f26c32 0%, #c146a1 50%, #a80077 51%, #f9703e 100%);
+            border-radius: 2%;
+
+            display: block;
+
+        }
+
+        .card {
+
+            transform-style: preserve-3d;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            backface-visibility: hidden;
+            background-color: transparent;
+            border-radius: 2%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+
+        }
+
+        .card:after {
+            backface-visibility: hidden;
+            position: absolute;
+            display: block;
+            content: '';
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .card.hearts:after,
+        .card.hearts:before {
+            background-image:
+                url('aaa.png');
+            background-size: 100%;
+
+        }
+
+        .card.clubs:after,
+        .card.clubs:before {
+
+
+            background-image:
+                url('aaa.png');
+            background-size: 100%;
+        }
+
+        .card.diamonds:after,
+        .card.diamonds:before {
+            background-image:
+                url('aaa.png');
+            background-size: 100%;
+        }
+
+        .card.spades:after,
+        .card.spades:before {
+
+            background-image:
+                url('aaa.png');
+            background-size: 100%;
+        }
+    </style>
 </head>
 
 <body id="top">
-    <!--<div class="preloader-bg"></div>
-        <div id="preloader">
-            <div id="preloader-status">
-                <div class="preloader-position loader">
-                    <span></span>
-                </div>
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader">
+                <span></span>
             </div>
-        </div> -->
+        </div>
+    </div>
     <header class="container-fluid">
         <div class="text-center hidden-xs">
             <!-- navigation start -->
-            <nav class="header-navigation fadeIn-element"><span class="logo-holder closed"><a href="index.html"><img alt="Laxt" src="images/img-logo.png"></a></span>
-                <a class="active link-underline-menu" href="index.html">Home</a>
+            <nav class="header-navigation fadeIn-element">
+                <!-- <a class="active link-underline-menu" href="index.html">Home</a> -->
                 <a class="link-underline-menu" href="about.html">About</a>
                 <a class="link-underline-menu" href="blog.html">Blog</a>
+                <span class="logo-holder "><a href="index.html"><img alt="Laxt" src="images/img-logo.png"></a></span>
                 <a class="link-underline-menu" href="contact.html">Contact</a>
                 <a target="_blank" href="https://www.amazon.in/dp/B079L7RYYL" class="shopnow">Buy</a>
             </nav>
@@ -46,7 +231,7 @@
             <!-- navigation mobile start -->
             <nav class="header-navigation-xs fadeIn-element">
                 <a class="logo-holder" href="index.html"><img alt="Laxt" src="images/img-logo.png"></a>
-                <a class="active link-underline-menu" href="index.html">Home</a>
+                <!-- <a class="active link-underline-menu" href="index.html">Home</a> -->
                 <a class="link-underline-menu" href="about.html">About</a>
                 <a class="link-underline-menu" href="blog.html">Blog</a>
                 <a class="link-underline-menu" href="contact.html">Contact</a>
@@ -55,33 +240,73 @@
             <!-- navigation mobile end -->
         </div>
     </header>
+
     <section class="upper-page">
         <!-- hero bg start -->
         <div class="hero-fullscreen overlay overlay-top-bottom-dark-75">
-            <!-- single image start -->
-            <div class="hero-fullscreen-FIX">
-                <div class="hero-bg bg-img-SINGLE"></div>
-            </div>
-            <!-- single image end -->
-        </div>
-        <!-- hero bg end -->
-        <!-- center container start -->
-        <div class="center-container">
-            <!-- center block start -->
-            <div class="center-block fadeIn-element">
+            <section style="display:block;z-index:-1;">
 
-                <h1 class="home-page-title">
-                       Old School is the New Cool
-                    </h1>
-                <!-- sign up launcher start -->
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card queen clubs"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card jack clubs"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card ten clubs"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card ace hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card king hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card queen hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card jack hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card ten hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card queen hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card jack hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card ten hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card queen hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card jack hearts"></div>
+                </div>
+                <div class="card-holder">
+                    <div class="back"></div>
+                    <div class="card ten hearts"></div>
+                </div>
+            </section>
 
+            <div id="overlay22">
+                <h1>rajat Tak</h1>
             </div>
-            <!-- center block end -->
-        </div>
-        <!-- center container end -->
-        <!-- scroll indicator start -->
-        <div class="scroll-indicator-wrapper fadeIn-element">
-            <div class="scroll-indicator"></div>
         </div>
         <!-- scroll indicator end -->
     </section>
@@ -93,8 +318,8 @@
                 <!-- col start -->
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading spacer-line-vertical-dark reveal-element">
-                            Let's Minimize
-                        </h2>
+                        Let's Minimize
+                    </h2>
                 </div>
                 <!-- col end -->
             </div>
@@ -106,9 +331,13 @@
                     <p class="about-txt reveal-element">
                         MINIMIZE is India&rsquo;s first strategic card game and it&rsquo;s not meant for everybody!
                         <br>
-                        <br> There&rsquo;s only one condition you need to abide by to be eligible to play MINIMIZE - get off the internet, put your smart-phones away and sit down with friends and family for some old fashioned recreation.
+                        <br> There&rsquo;s only one condition you need to abide by to be eligible to play MINIMIZE - get
+                        off the internet, put your smart-phones away and sit down with friends and family for some old
+                        fashioned recreation.
                         <br>
-                        <br> MINIMIZE is the first of many card and board games that we plan to launch in the market, and we already have our priorities sorted &ndash; to bring back the times where all you needed for entertainment and recreation were your people, and not gadgets!
+                        <br> MINIMIZE is the first of many card and board games that we plan to launch in the market,
+                        and we already have our priorities sorted &ndash; to bring back the times where all you needed
+                        for entertainment and recreation were your people, and not gadgets!
                         <br>
                         <br> Buy your pack now and let&rsquo;s Minimize!
                     </p>
@@ -140,8 +369,9 @@
                 </div>-->
             <div class="wrapper">
                 <video width="100%" class="video">
-                    <source src="Minimizevideo.mp4" type="video/mp4">
-                    <source src="Minimizevideo.ogg" type="video/ogg"></source>
+                    <source src="aaa.mp4" type="video/mp4">
+                    <source src="aaa.ogg" type="video/ogg">
+                    </source>
                     </source>
                 </video>
                 <div class="playpause">&nbsp; </div>
@@ -188,7 +418,7 @@
             .video {
                 width: 100%;
             }
-            
+
             .wrapper {
                 display: table;
                 width: auto;
@@ -196,7 +426,7 @@
                 width: 80%;
                 margin: 0 auto;
             }
-            
+
             .playpause {
                 background: url(img/background/play-icon.png) no-repeat center center;
                 width: 100%;
@@ -216,8 +446,8 @@
                 <!-- col start -->
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading spacer-line-vertical-dark reveal-element">
-                           Blog
-                        </h2>
+                        Blog
+                    </h2>
                 </div>
                 <!-- col end -->
             </div>
@@ -230,8 +460,8 @@
 
                         <!--<img src="img/background/blog-img.png" width="645" height="350">
                         <span>BY  STUART DREDGE   /   NOVEMBER 6, 2009 12:00 AM PST</span>-->
-                        <h4 style="font-size:60px;"> 
-COMING SOON!</h4>
+                        <h4 style="font-size:60px;">
+                            COMING SOON!</h4>
                         <h4>GOOD THINGS TAKE TIME </h4>
                         <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to </p>
                         <a href="#">Read More</a>-->
@@ -271,24 +501,30 @@ COMING SOON!</h4>
 
                                 <ul class="ins-ul">
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins1.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins1.jpg"></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins2.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins2.jpg"></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins3.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins3.jpg"></a>
                                     </li>
                                     <li style="width:100%; padding:0;display:block;">
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins4.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins4.jpg"></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins5.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins5.jpg"></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins6.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins6.jpg"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -316,7 +552,8 @@ COMING SOON!</h4>
 
 									<span>+917895977777</span>
 
-									<span>akashkhanduja@minimizecards.com</span>*/--></div>
+									<span>akashkhanduja@minimizecards.com</span>*/-->
+                            </div>
                         </div>
                         <!-- col end -->
                     </div>
@@ -337,16 +574,21 @@ COMING SOON!</h4>
                         <div class="social-icons-wrapper reveal-element">
                             <ul class="social-icons">
                                 <li class="social-icon">
-                                    <a target="_blank" href="https://www.facebook.com/minimizeindia/"><img src="images/img-fb.png"></a>
+                                    <a target="_blank" href="https://www.facebook.com/minimizeindia/"><img
+                                            src="images/img-fb.png"></a>
                                 </li>
                                 <li class="social-icon">
-                                    <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins.png"></a>
+                                    <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                            src="images/img-ins.png"></a>
                                 </li>
                                 <li class="social-icon">
-                                    <a target="_blank" href="https://twitter.com/minimize_in"><img src="images/img-t.png"></a>
+                                    <a target="_blank" href="https://twitter.com/minimize_in"><img
+                                            src="images/img-t.png"></a>
                                 </li>
                                 <li class="social-icon">
-                                    <a target="_blank" href="https://www.youtube.com/channel/UCvs6RPLcve4zONFzbMdqQmg?guided_help_flow=3&amp;disable_polymer=true"><img src="images/img-yt.png"></a>
+                                    <a target="_blank"
+                                        href="https://www.youtube.com/channel/UCvs6RPLcve4zONFzbMdqQmg?guided_help_flow=3&amp;disable_polymer=true"><img
+                                            src="images/img-yt.png"></a>
                                 </li>
 
                             </ul>
@@ -373,13 +615,13 @@ COMING SOON!</h4>
     </script>
     <!-- scripts end -->
     <script>
-        $("video").click(function() {
+        $("video").click(function () {
             $(this).prop('muted', !$(this).prop('muted'));
         });
     </script>
     <script>
-        $(document).ready(function() {
-            $(".button-video").on("click", function() {
+        $(document).ready(function () {
+            $(".button-video").on("click", function () {
                 $(".asd").toggleClass("shides");
                 $(".div-a").toggleClass("div-aaaa");
             });
@@ -403,8 +645,8 @@ COMING SOON!</h4>
         }
     </script>
     <script>
-        $(document).ready(function() {
-            $('.video').parent().click(function() {
+        $(document).ready(function () {
+            $('.video').parent().click(function () {
                 if ($(this).children(".video").get(0).paused) {
                     $(this).children(".video").get(0).play();
                     $(this).children(".playpause").fadeOut();
