@@ -686,13 +686,16 @@ strong {
 /* 4. upper page */
 .upper-page {
   position: relative;
-  width: 100%;
-  height: 100%;
+
+  height: 100vh;
   overflow: hidden;
   left: 0;
   top: 0;
   margin: 0;
   background-image: url('../images/background-SINGLE-bg.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+
   /* background-image: linear-gradient(to bottom right, #004c4c, #708090, #36454f, #111111); */
 }
 
@@ -713,7 +716,17 @@ strong {
   vertical-align: middle;
 }
 
-.center-container-contact-modal,
+background-imagebackground-imagebackground-imageck {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+background-imagebackground-imagebackground-imageck {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+background-imagebackground-imagebackground-image .center-container-contact-modal,
 .center-container-sign-up-modal {
   position: absolute;
   display: table;
