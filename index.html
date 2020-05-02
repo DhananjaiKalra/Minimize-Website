@@ -102,9 +102,9 @@
 
         .card-holder {
             transform-style: preserve-3d;
-            backface-visibility: hidden;
+            backface-visibility: visible;
             position: relative;
-            width: 90px;
+            width: 80px;
             height: 130px;
             display: inline-block;
             /* box-shadow: 1px 2px 2px rgba(0, 0, 0, .4); */
@@ -123,20 +123,18 @@
         }
 
         .back {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
+            position: relative;
             width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            transform: rotateY(180deg);
 
+            height: 130px;
+            overflow-x: hidden;
+            backface-visibility: visible;
+            transform: rotateY(180deg);
             background-image: url('back.png');
             border-radius: 2%;
             background-size: 90%;
             display: block;
+            background-repeat: no-repeat;
 
         }
 
@@ -148,7 +146,7 @@
             left: 0;
             bottom: 0;
             right: 0;
-            backface-visibility: hidden;
+            backface-visibility: visible;
             background-color: transparent;
             border-radius: 2%;
             display: block;
@@ -174,7 +172,7 @@
         .card.hearts:before {
             background-image:
                 url('p1.png');
-            background-size: 90%;
+            background-size: 100%;
 
         }
 
@@ -184,14 +182,14 @@
 
             background-image:
                 url('8.png');
-            background-size: 90%;
+            background-size: 100%;
         }
 
         .card.diamonds:after,
         .card.diamonds:before {
             background-image:
                 url('5.png');
-            background-size: 90%;
+            background-size: 100%;
         }
 
         .card.spades:after,
@@ -199,14 +197,14 @@
 
             background-image:
                 url('4.png');
-            background-size: 90%;
+            background-size: 100%;
         }
 
         .card.h:after,
         .card.h:before {
             background-image:
                 url('p2.png');
-            background-size: 90%;
+            background-size: 100%;
 
         }
 
@@ -214,7 +212,7 @@
         .card.e:before {
             background-image:
                 url('p3.png');
-            background-size: 90%;
+            background-size: 100%;
 
         }
 
@@ -222,7 +220,7 @@
         .card.a:before {
             background-image:
                 url('p4.png');
-            background-size: 90%;
+            background-size: 100%;
 
         }
 
@@ -230,7 +228,7 @@
         .card.r:before {
             background-image:
                 url('joker.png');
-            background-size: 90%;
+            background-size: 100%;
 
         }
     </style>
