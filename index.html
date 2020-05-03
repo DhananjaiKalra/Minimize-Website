@@ -465,6 +465,13 @@
                         </div>
                     </div>
                     <script>
+                        var fixed = document.getElementById('wrapper');
+
+                        fixed.addEventListener('touchmove', function (e) {
+
+                            e.preventDefault();
+
+                        }, false);
                         var events = new Events();
                         events.add = function (obj) {
                             obj.events = {};
