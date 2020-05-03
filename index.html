@@ -140,6 +140,7 @@
             height: 130px;
             overflow-x: hidden;
             backface-visibility: visible;
+            -webkit-backface-visibility: visible;
             -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
             background-image: url('back.png');
@@ -153,8 +154,8 @@
         #tilt {
             -webkit-transform: rotatez(-20deg);
             transform: rotatez(-20deg);
-
             backface-visibility: visible;
+            -webkit-backface-visibility: visible;
             animation-name: tii;
             position: absolute;
             top: 50%;
@@ -201,7 +202,7 @@
         }
 
         .card:after {
-            backface-visibility: hidden;
+            backface-visibility: visible;
             position: absolute;
             display: block;
             content: '';
@@ -358,7 +359,7 @@
                         <div class="card-hol card-holder">
                             <div class="back"></div>
                             <div class="card queen a"></div>
-                        </div>rotateY(180deg);
+                        </div>
 
                         <div class="card-hol card-holder">
                             <div class="back"></div>
