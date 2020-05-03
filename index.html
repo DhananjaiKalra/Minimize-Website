@@ -300,7 +300,7 @@
             </nav>
             <!-- navigation end -->
         </div>
-        <div class="text-center visible-xs">
+        <div class="text-center visible-xs" style="width:100%">
             <!-- navigation mobile start -->
             <nav class="header-navigation-xs fadeIn-element">
                 <a class="logo-holder" href="index.html"><img alt="Laxt" src="images/img-logo.png"></a>
@@ -390,7 +390,8 @@
             <div class="row about-top">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark">
+                        <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark"
+                            style="margin:8px">
                             Let's <spam class="textgra">Minimize</spam>
                         </h2>
 
@@ -398,7 +399,7 @@
                         <div class="row about-bottom">
 
                             <div class="ter">
-                                <p clss="about-txt reveal-element text-dark" style="text-align: justify;">
+                                <p class="about-txt reveal-element text-dark " style="text-align: justify;">
                                     MINIMIZE is India&rsquo;s first strategic card game and it&rsquo;s not meant for
                                     everybody!
                                     <br>
@@ -428,7 +429,7 @@
                     <!-- col end -->
 
                     <!--col-lg-6 end-->
-                    <div class="col-lg-6" id="wrapper">
+                    <div class=" col-lg-6" id="wrapper">
                         <div class="viewport">
                             <div class="cube">
                                 <div class="side" style="width:50px;height:200px">
@@ -644,11 +645,13 @@
                             this.lastY = this.mouseY;
 
                             if (this.down) {
-                                this.torqueX = this.torqueX * this.sensivityFade + (this.distanceX * this.speed -
+                                this.torqueX = this.torqueX * this.sensivityFade + (this.distanceX * this
+                                        .speed -
                                         this
                                         .torqueX) *
                                     this.sensivity;
-                                this.torqueY = this.torqueY * this.sensivityFade + (this.distanceY * this.speed -
+                                this.torqueY = this.torqueY * this.sensivityFade + (this.distanceY * this
+                                        .speed -
                                         this
                                         .torqueY) *
                                     this.sensivity;
@@ -696,7 +699,8 @@
                                     this.positionX += 360;
                                 }
 
-                                if (!(this.positionY >= 46 && this.positionY <= 130) && !(this.positionY >= 220 &&
+                                if (!(this.positionY >= 46 && this.positionY <= 130) && !(this.positionY >=
+                                        220 &&
                                         this
                                         .positionY <=
                                         308)) {
@@ -811,10 +815,12 @@
                         Cube.prototype.sideChange = function () {
 
                             for (var i = 0; i < this.sides.length; ++i) {
-                                this.sides[i].getElementsByClassName('cube-image')[0].className = 'cube-image';
+                                this.sides[i].getElementsByClassName('cube-image')[0].className =
+                                    'cube-image';
                             }
 
-                            this.sides[this.viewport.currentSide - 1].getElementsByClassName('cube-image')[0]
+                            this.sides[this.viewport.currentSide - 1].getElementsByClassName('cube-image')[
+                                    0]
                                 .className =
                                 'cube-image active';
 
