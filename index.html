@@ -63,50 +63,65 @@
 
         .card-hol {
             animation-name: fly-in;
+            -webkit-animation-name: fly-in;
             animation-duration: 7s;
+            -webkit-animation-duration: 7s;
             animation-direction: alternate;
+            -webkit-animation-direction: alternate;
             animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
+            -webkit-animation-timing-function: ease-in-out;
         }
 
         .card-holder:nth-of-type(1) {
             animation-delay: .5s;
+            -webkit-animation-delay: .5s;
         }
 
         .card-holder:nth-of-type(2) {
             animation-delay: 1s;
+            -webkit-animation-delay: 1s;
         }
 
         .card-holder:nth-of-type(3) {
             animation-delay: 1.5s;
+            -webkit-animation-delay: 1.5s;
         }
 
         .card-holder:nth-of-type(4) {
             animation-delay: 2s;
+            -webkit-animation-delay: 2s;
         }
 
         .card-holder:nth-of-type(5) {
             animation-delay: 2.5s;
+            -webkit-animation-delay: 2.5s;
         }
 
         .card-holder:nth-of-type(6) {
             animation-delay: 3s;
+            -webkit-animation-delay: 3s;
         }
 
         .card-holder:nth-of-type(7) {
             animation-delay: 3.5s;
+            -webkit-animation-delay: 3.5s;
         }
 
         .card-holder:nth-of-type(8) {
+            -wenkit-animation-delay: 4s;
             animation-delay: 4s;
         }
 
         .card-holder:nth-of-type(9) {
             animation-delay: 4.5s;
+            -webkit-animation-delay: 4.5s;
         }
 
         .card-holder:nth-of-type(10) {
             animation-delay: 5s;
+            -webkit-animation-delay: 5s;
         }
 
         /* 
@@ -139,6 +154,7 @@
 
         .card-holder:active {
             transform: scale(.9);
+            -webkit-transform: scale(.9);
         }
 
         .back {
@@ -211,8 +227,8 @@
         }
 
         .card:after {
-            backface-visibility: visible;
-            -webkit-backface-visibility: visible;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
             position: absolute;
             display: block;
             content: '';
@@ -345,7 +361,7 @@
 
 
 
-                        </>
+
                         <div class=" card-hol card-holder">
                             <div class="back"></div>
                             <div class="card queen diamonds"></div>
