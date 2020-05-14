@@ -12,6 +12,7 @@ div.desktop-wrapper {
   padding-top: 25px;
   padding-bottom: 67.5%;
   height: 0;
+
 }
 
 /* http://img01.deviantart.net/05b6/i/2011/030/8/5/apple_led_cinema_screen_by_fisshy94-d38e3o5.png */
@@ -22,16 +23,20 @@ div.desktop-wrapper iframe {
   padding: 3.4% 10.8% 18.6%;
   /* 11.9% 15.5% 14.8% */
   position: absolute;
-  top: 0;
+  top: 14;
   left: 0;
   width: 100%;
   height: 100%;
 }
+
 /* dk */
-.footgra1{
-background: rgb(1,98,7);
-background: linear-gradient(163deg, rgba(1,98,7,1) 0%, rgba(0,0,92,1) 36%, rgba(119,3,3,1) 74%, rgba(194,180,3,1) 100%);
+.footgra1 {
+  box-shadow: inset 5px 50px 80px rgba(1, 98, 7, 0.6), inset 5px 80px 140px rgba(0, 0, 92, 1), inset 4px 150px 170px rgba(119, 3, 3, 1), inset 7px 200px 240px rgba(194, 180, 3, 1);
+
+  background: linear-gradient(163deg, rgba(1, 98, 7, 0.7) 0%, rgba(0, 0, 92, 0.7) 36%, rgba(119, 3, 3, 0.7) 74%, rgba(1, 98, 7, 0.8) 100%);
 }
+
+
 
 .textgra {
   text-transform: uppercase;
@@ -42,6 +47,30 @@ background: linear-gradient(163deg, rgba(1,98,7,1) 0%, rgba(0,0,92,1) 36%, rgba(
   -webkit-text-fill-color: transparent;
 
 
+}
+
+
+.vt {
+  text-transform: Uppercase;
+  margin-bottom: .5em;
+  font-family: 'Rubik', sans-serif;
+  font-size: 6rem;
+  background-image: url('..//textgra.png');
+  background-size: 5%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: rgba(255, 255, 255, 0.99);
+  text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5), 20px 20px 20px rgba(0, 0, 0, .4);
+}
+
+
+.vdo {
+  background-image: url('..//screen.jpg');
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-attachment: scroll;
+  /* background-repeat: space; */
 }
 
 #wrapper {
