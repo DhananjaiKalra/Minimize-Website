@@ -95,11 +95,12 @@ div.desktop-wrapper iframe {
 
 .vdo {
   background-image: url('..//screen.jpg');
-  background-size: contain;
+  background-size: cover;
+  background-repeat: repeat-x;
   background-attachment: scroll;
-  background-repeat: repeat-y;
+
   /* background-repeat: space; */
-  box-shadow: inset 4px 80px 5000px rgba(0, 0, 0, 0.8), inset 4px 80px 5000px rgba(7, 68, 71, 0.8);
+  box-shadow: inset 4px 80px 100px rgba(0, 0, 0, 0.6);
 }
 
 #wrapper {
