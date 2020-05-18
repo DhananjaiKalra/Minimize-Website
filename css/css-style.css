@@ -56,19 +56,45 @@ div.desktop-wrapper iframe {
   font-family: 'Rubik', sans-serif;
   font-size: 6rem;
   background-image: url('..//textgra.png');
-  background-size: 5%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-size: 10%;
   color: rgba(255, 255, 255, 0.99);
-  text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5), 20px 20px 20px rgba(0, 0, 0, .4);
+  text-shadow: 10px 10px 10px rgba(255, 255, 255, 0.99), 20px 20px 20px rgba(0, 0, 0, .6);
 }
 
+.vt {
+  position: relative;
+  background: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 10px 10px 10px rgba(0, 0, 0, .5), 20px 20px 20px rgba(0, 0, 0, .4), 30px 30px 30px rgba(0, 0, 0, .1); */
+
+}
+
+.vt:before,
+.vt:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* text-shadow: 10px 10px 10px rgba(0, 0, 0, .5), 20px 20px 20px rgba(0, 0, 0, .4), 30px 30px 30px rgba(0, 0, 0, .1); */
+
+}
+
+.vt:before {
+  z-index: -1;
+  text-shadow: -0.001em -0.001em 1px rgba(255, 255, 255, .15)
+}
+
+.vt:after {
+  z-index: -2;
+  /* text-shadow: 10px 10px 10px rgba(0, 0, 0, .5), 20px 20px 20px rgba(0, 0, 0, .4), 30px 30px 30px rgba(0, 0, 0, .1); */
+  mix-blend-mode: multiply;
+}
 
 .vdo {
-  background-image: url('..//screen.jpeg');
+  background-image: url('..//screen.jpg');
   background-size: contain;
-  background-repeat: repeat-y;
   background-attachment: scroll;
   /* background-repeat: space; */
 }
@@ -1266,15 +1292,15 @@ a:hover .c-btn {
 
 /* 12. navigation */
 .navigation-bg-light {
-  background: rgba(0, 0, 0, 1);
+  /* background: rgba(0, 0, 0, 1); */
   -webkit-transition: all .4s ease-out;
   -moz-transition: all .4s ease-out;
   -ms-transition: all .4s ease-out;
   -o-transition: all .4s ease-out;
   transition: all .4s ease-out;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .35);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .35);
-  box-shadow: 0 0 5px rgba(0, 0, 0, .35);
+  -webkit-box-shadow: inset 3px 50px 120px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, .35);
+  -moz-box-shadow: inset 3px 50px 120px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, .35);
+  box-shadow: inset 3px 50px 120px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, .35);
 }
 
 header {
