@@ -19,35 +19,337 @@
         <!-- google fonts start -->
         <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CMontserrat:400,700%7CPoppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel=
         "stylesheet" type="text/css"><!-- google fonts end -->
+    <style>
+        /*dk*/
+
+        .coin {
+            animation-name: ring;
+            animation-duration: 3s;
+            width: 71px;
+            height: 55px;
+            background-image: url(images/logo.png);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform-origin: center;
+
+        }
+
+        @keyframes ring {
+            from {
+
+                transform: rotatey(0deg);
+            }
+
+            to {
+                transform: rotatey(360deg);
+
+            }
+        }
+
+        @keyframes fly-in {
+            0% {
+                transform: rotateY(540deg) rotateX(1080deg) translateZ(400px) translateX(80px) translateY(0);
+                -webkit-transform: rotateY(540deg) rotateX(1080deg) translateZ(400px) translateX(80px) translateY(0);
+            }
+
+            40% {
+                transform: rotateY(0deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
+                -webkit-transform: rotateY(0deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
+            }
+
+            60% {
+                transform: rotateY(90deg) rotateX(0) translateZ(0) translateX(100px) translateY(80vh);
+                -webkit-transform: rotateY(90deg) rotateX(0) translateZ(0) translateX(100px) translateY(80vh);
+            }
+
+            80% {
+                transform: rotateY(180deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
+                -webkit-transform: rotateY(180deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
+            }
+
+            100% {
+                transform: rotateY(0) rotateX(0) translateZ(0) translateX(0) translateY(0);
+                -webkit-transform: rotateY(0) rotateX(0) translateZ(0) translateX(0) translateY(0);
+            }
+        }
+
+
+
+        .card-hol {
+            animation-name: fly-in;
+            -webkit-animation-name: fly-in;
+            animation-duration: 7s;
+            -webkit-animation-duration: 7s;
+            animation-direction: alternate;
+            -webkit-animation-direction: alternate;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-timing-function: ease-in-out;
+        }
+
+        .card-holder:nth-of-type(1) {
+            animation-delay: .5s;
+            -webkit-animation-delay: .5s;
+        }
+
+        .card-holder:nth-of-type(2) {
+            animation-delay: 1s;
+            -webkit-animation-delay: 1s;
+        }
+
+        .card-holder:nth-of-type(3) {
+            animation-delay: 1.5s;
+            -webkit-animation-delay: 1.5s;
+        }
+
+        .card-holder:nth-of-type(4) {
+            animation-delay: 2s;
+            -webkit-animation-delay: 2s;
+        }
+
+        .card-holder:nth-of-type(5) {
+            animation-delay: 2.5s;
+            -webkit-animation-delay: 2.5s;
+        }
+
+        .card-holder:nth-of-type(6) {
+            animation-delay: 3s;
+            -webkit-animation-delay: 3s;
+        }
+
+        .card-holder:nth-of-type(7) {
+            animation-delay: 3.5s;
+            -webkit-animation-delay: 3.5s;
+        }
+
+        .card-holder:nth-of-type(8) {
+            -wenkit-animation-delay: 4s;
+            animation-delay: 4s;
+        }
+
+        .card-holder:nth-of-type(9) {
+            animation-delay: 4.5s;
+            -webkit-animation-delay: 4.5s;
+        }
+
+        .card-holder:nth-of-type(10) {
+            animation-delay: 5s;
+            -webkit-animation-delay: 5s;
+        }
+
+        /* 
+      body {
+        background: #000;
+        padding: 4% 10%;
+        perspective: 400px;
+        overflow-x: hidden;
+      } */
+
+        .card-holder {
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+            backface-visibility: visible;
+            -webkit-backface-visibility: visible;
+            position: relative;
+            width: 80px;
+            height: 130px;
+            display: inline-block;
+            /* box-shadow: 1px 2px 2px rgba(0, 0, 0, .4); */
+            border: none;
+            margin: 12px;
+            margin-top: 10%;
+            padding: 0px;
+        }
+
+        .card-holder:hover {
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+        }
+
+        .card-holder:active {
+            transform: scale(.9);
+            -webkit-transform: scale(.9);
+        }
+
+        .back {
+            position: relative;
+            width: 100%;
+            height: 130px;
+            overflow-x: hidden;
+            /*change*/
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            background-image: url('back.png');
+            border-radius: 2%;
+            background-size: 100%;
+            display: block;
+            background-repeat: no-repeat;
+
+        }
+
+        #tilt {
+            -webkit-transform: rotatez(-20deg);
+            transform: rotatez(-20deg);
+            /*hidden*/
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            animation-name: tii;
+            position: absolute;
+            top: 50%;
+            animation-duration: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        @keyframes tii {
+            0% {
+                transform: rotateY(0deg) rotatez(-20deg) translateY(-50%);
+
+                -webkit-transform: rotateY(0deg) rotatez(-20deg) translateY(-50%);
+
+            }
+
+            100% {
+                transform: rotateY(360deg) rotatez(-20deg) translateY(-50%);
+
+                -webkit-transform: rotateY(360deg) rotatez(-20deg) translateY(-50%);
+
+            }
+        }
+
+        .card {
+
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            backface-visibility: visible;
+            -webkit-backface-visibility: visible;
+            background-color: transparent;
+            border-radius: 2%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+
+        }
+
+        .card:after {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            position: absolute;
+            display: block;
+            content: '';
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .card.hearts:after,
+        .card.hearts:before {
+            background-image:
+                url('p1.png');
+            background-size: 100%;
+
+        }
+
+        .card.clubs:after,
+        .card.clubs:before {
+
+
+            background-image:
+                url('8.png');
+            background-size: 100%;
+        }
+
+        .card.diamonds:after,
+        .card.diamonds:before {
+            background-image:
+                url('5.png');
+            background-size: 100%;
+        }
+
+        .card.spades:after,
+        .card.spades:before {
+
+            background-image:
+                url('4.png');
+            background-size: 100%;
+        }
+
+        .card.h:after,
+        .card.h:before {
+            background-image:
+                url('p2.png');
+            background-size: 100%;
+
+        }
+
+        .card.e:after,
+        .card.e:before {
+            background-image:
+                url('p3.png');
+            background-size: 100%;
+
+        }
+
+        .card.a:after,
+        .card.a:before {
+            background-image:
+                url('p4.png');
+            background-size: 100%;
+
+        }
+
+        .card.r:after,
+        .card.r:before {
+            background-image:
+                url('joker.png');
+            background-size: 100%;
+
+        }
+    </style>
     </head>
 
 
 <body id="top">
         
-        <header class="container-fluid">
-            <div class="text-center hidden-xs">
-                <!-- navigation start -->
-                <nav class="header-navigation fadeIn-element">
-                <span class="logo-holder closed"><a href="index.html"><img alt="Laxt" src="images/img-logo.png"></a></span>
-               		 <a class="active link-underline-menu" href="index.html">Home</a>
-                     <a class="link-underline-menu" href="about.html">About</a>
-                     <a class="link-underline-menu" href="blog.html">Blog</a>
-                     <a class="link-underline-menu" href="contact.html">Contact</a>
-                     <a target="_blank" href="https://www.amazon.in/dp/B079L7RYYL" class="shopnow">Buy</a>
-                </nav><!-- navigation end -->
-            </div>
-            <div class="text-center visible-xs">
-                <!-- navigation mobile start -->
-                <nav class="header-navigation-xs fadeIn-element">
-                     <a class="logo-holder" href="index.html"><img alt="Laxt" src="images/img-logo.png"></a> 
-                    <a class="active link-underline-menu" href="index.html">Home</a>
-                     <a class="link-underline-menu" href="about.html">About</a>
-                     <a class="link-underline-menu" href="blog.html">Blog</a>
-                     <a class="link-underline-menu" href="contact.html">Contact</a>
-                     <a target="_blank" href="https://www.amazon.in/dp/B079L7RYYL" class="shopnow">Buy</a>
-                </nav><!-- navigation mobile end -->
-            </div>
-        </header><!-- header section end -->
+         <header id="navvv" class="container-fluid">
+        <div class="text-center hidden-xs">
+            <!-- navigation start -->
+            <nav class="header-navigation fadeIn-element">
+                <!-- <a class="active link-underline-menu" href="index.html">Home</a> -->
+                <a class="link-underline-menu" href="about.html">About</a>
+                <a class="link-underline-menu" href="blog.html">Blog</a>
+                <span class="logo-holder "><a href="index.html"><img alt="Laxt" src="images/img-logo.png"></a></span>
+                <a class="link-underline-menu" href="contact.html">Contact</a>
+                <a target="_blank" href="https://www.amazon.in/dp/B079L7RYYL" class="shopnow">Buy</a>
+            </nav>
+            <!-- navigation end -->
+        </div>
+        <div class="text-center visible-xs">
+            <!-- navigation mobile start -->
+            <nav class="header-navigation-xs fadeIn-element">
+                <a class="logo-holder" href="index.html"><img alt="Laxt" src="images/img-logo.png"></a>
+                <!-- <a class="active link-underline-menu" href="index.html">Home</a> -->
+                <a class="link-underline-menu" href="about.html">About</a>
+                <a class="link-underline-menu" href="blog.html">Blog</a>
+                <a class="link-underline-menu" href="contact.html">Contact</a>
+                <a target="_blank" href="https://www.amazon.in/dp/B079L7RYYL" class="shopnow">Buy</a>
+            </nav>
+            <!-- navigation mobile end -->
+        </div>
+    </header><!-- header section end -->
         <!-- home section start -->
         <section class="upper-page">
             <!-- hero bg start -->
@@ -83,9 +385,10 @@
                 <div class="row about-top">
                     <!-- col start -->
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading spacer-line-vertical-dark reveal-element">
-                            Bringing back retro <br>
-Bringing back the good old times!
+                       <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark"
+                            style="margin:8px">
+                          <spam class="textgra">  Bringing back retro <br>
+Bringing back the good old times!</spam>
                         </h2>
                     </div><!-- col end -->
                 </div><!-- row end -->
@@ -93,8 +396,8 @@ Bringing back the good old times!
                 <div class="row about-bottom">
                     <!-- col start -->
                     <div class="text-center">
-                        <p class="about-txt reveal-element">
-                            MINIMIZE is India’s first strategic card game and it’s not meant for everybody!
+                        <p class="about-txt reveal-element" style="color:black">
+                           <spam class="textgra" style="font-family: 'Conv_LemonMilk', sans-serif"> MINIMIZE</spam> is India’s first strategic card game and it’s not meant for everybody!
 <br><br>
 There’s only one condition you need to abide by to be eligible to play MINIMIZE - get off the internet, put your smart-phones away and sit down with friends and family for some old fashioned recreation.<br><br>
 
@@ -109,66 +412,75 @@ Buy your pack now and let’s Minimize!
         </section><!-- about section end -->
         
         
-         <section class="section-dark" id="contact">
-            <!-- container start -->
-            <div class="container">
-                
-                <div class="row">
-                    <!-- col start -->
-                    <div class="col-lg-12 text-center">
-                        <!-- contact info start -->
-                        <div class="contact-info-wrapper reveal-element">
-                            <!-- col start -->
-                            <div class="col-sm-4">
-                                <div class="contact-info-description">
-                                   <img src="images/img-logo.png">
-                                   
-                                   <p class="logo-p">Marketed by <br>
-ivak entertainment games llp & <br>
-bootstrap media communications pvt ltd </p>
-                                </div>
-                            </div><!-- col end -->
-                            <!-- col start -->
-                           <div class="col-sm-4">
+             <section class="footgra1" id="contact">
+        <!-- container start -->
+        <div class="container">
+
+            <div class="row">
+                <!-- col start -->
+                <div class="col-lg-12 text-center">
+                    <!-- contact info start -->
+                    <div class="contact-info-wrapper reveal-element">
+                        <!-- col start -->
+                        <div class="col-sm-4">
+                            <div class="contact-info-description">
+                                <!--dk-->
+                                <div class="coin"></div> <img src="images/logo1.png">
+                                <p class="logo-p">Developed &amp; Marketed by
+                                    <br> ivak entertainment games llp
+
+                            </div>
+                        </div>
+                        <!-- col end -->
+                        <!-- col start -->
+                        <div class="col-sm-4">
                             <div class="contact-info-description">
                                 <h4>Instagram</h4>
 
                                 <ul class="ins-ul">
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins1.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins1.jpg"></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins2.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins2.jpg"></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins3.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins3.jpg"></a>
                                     </li>
                                     <li style="width:100%; padding:0;display:block;">
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins4.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins4.jpg"></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins5.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins5.jpg"></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins6.jpg"></a>
+                                        <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                                src="images/img-ins6.jpg"></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                            <!-- col start -->
-                            <div class="col-sm-4">
-                                <div class="contact-info-description">
-                                	<h4>Contact</h4>
-                                    
-                                    <span>IVAK Entertainment Games LLP</span>
+                        <!-- col end -->
+                        <!-- col start -->
+                        <div class="col-sm-4">
+                            <div class="contact-info-description">
+                                <h4>Contact</h4>
+                                <span>Akask Khanduja</span>
+                                <span>+91-7895977777</span>
+                                <span>akashkhanduja@minimizecards.com</span>
+                                <span>IVAK Entertainment Games LLP</span>
+                                
+                                <span>1st floor, 39 Maharani Bagh, GMS Road, Dehradun 248001 Uttarakhand</span>
 
-									<span>1st floor, 39 Maharani Bagh, GMS Road, Dehradun 248001 Uttarakhand</span>
-
-									 <br>
-                                    
-                                    <!--/*<span>Ivnish Juneja</span>
+                                <br>
+                                <!--/*<span>Ivnish Juneja</span>
 
 									<span>+918218092664</span>
 
@@ -181,56 +493,60 @@ bootstrap media communications pvt ltd </p>
 									<span>+917895977777</span>
 
 									<span>akashkhanduja@minimizecards.com</span>*/-->
+                            </div>
+                        </div>
+                        <!-- col end -->
+                    </div>
+                    <!-- contact info end -->
+                </div>
+                <!-- col end -->
+            </div>
+            <!-- row end -->
 
-  
-                                </div>
-                            </div><!-- col end -->
-                        </div><!-- contact info end -->
-                    </div><!-- col end -->
-                </div><!-- row end -->
-                
-                <div class="row">
-                    <!-- col start -->
-                    <div class="col-lg-12">
-                        <!-- social icons start -->
-                        <!-- social icons end -->
-                        <!-- copyright start -->
-                        <div class="copyright ">
-                            <p>Minimize &copy; 2018 All Rights Reserved.</p>
-                            <div class="social-icons-wrapper reveal-element">
+            <div class="row">
+                <!-- col start -->
+                <div class="col-lg-12">
+                    <!-- social icons start -->
+                    <!-- social icons end -->
+                    <!-- copyright start -->
+                    <div class="copyright ">
+                        <p>Minimize &copy; 2018 All Rights Reserved.</p>
+                        <div class="social-icons-wrapper reveal-element">
                             <ul class="social-icons">
                                 <li class="social-icon">
-                                    <a target="_blank" href="https://www.facebook.com/minimizeindia/"><img src="images/img-fb.png"></a>
+                                    <a target="_blank" href="https://www.facebook.com/minimizeindia/"><img
+                                            src="images/img-fb1.png"></a>
                                 </li>
                                 <li class="social-icon">
-                                    <a target="_blank" href="https://www.instagram.com/minimizecards/"><img src="images/img-ins.png"></a>
+                                    <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                                            src="images/img-ins1.png"></a>
                                 </li>
                                 <li class="social-icon">
-                                    <a target="_blank" href="https://twitter.com/minimize_in"><img src="images/img-t.png"></a>
+                                    <a target="_blank" href="https://twitter.com/minimize_in"><img
+                                            src="images/img-t1.png"></a>
                                 </li>
                                 <li class="social-icon">
-                                   <a target="_blank" href="https://www.youtube.com/channel/UCvs6RPLcve4zONFzbMdqQmg?guided_help_flow=3&disable_polymer=true"><img src="images/img-yt.png"></a>
+                                    <a target="_blank"
+                                        href="https://www.youtube.com/channel/UCvs6RPLcve4zONFzbMdqQmg?guided_help_flow=3&amp;disable_polymer=true"><img
+                                            src="images/img-yt1.png"></a>
                                 </li>
-                                
+
                             </ul>
                         </div>
-                         </div><!-- copyright end -->
-                    </div><!-- col end -->
-                </div><!-- row end -->
-            </div><!-- container end -->
-        </section> 
-        <!-- contact modal start clothifashion.com -->
-         <!-- contact modal end -->
-        <!-- to top arrow start -->
-        <a class="page-scroll" href="#top">
-        <div class="to-top-arrow">
-            <span class="ion-ios-arrow-up"></span>
-        </div></a><!-- to top arrow end -->
-        <!-- scripts start -->
-        <script src="js/plugins.js">
-        </script> 
-        <script src="js/laxt.js">
-        </script><!-- scripts end -->
+                    </div>
+                    <!-- copyright end -->
+                </div>
+                <!-- col end -->
+            </div>
+            <!-- row end -->
+        </div>
+        <!-- container end -->
+    </section>
+     <script src="modernizr-1.6.min.js"></script>
+      <script src="js/9352-js-plugins.js">
+    </script>
+    <script src="js/5083-js-laxt.js">
+    </script>
     </body>
 
 </html>
