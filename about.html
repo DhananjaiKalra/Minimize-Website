@@ -46,278 +46,7 @@
             }
         }
 
-        @keyframes fly-in {
-            0% {
-                transform: rotateY(540deg) rotateX(1080deg) translateZ(400px) translateX(80px) translateY(0);
-                -webkit-transform: rotateY(540deg) rotateX(1080deg) translateZ(400px) translateX(80px) translateY(0);
-            }
 
-            40% {
-                transform: rotateY(0deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
-                -webkit-transform: rotateY(0deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
-            }
-
-            60% {
-                transform: rotateY(90deg) rotateX(0) translateZ(0) translateX(100px) translateY(80vh);
-                -webkit-transform: rotateY(90deg) rotateX(0) translateZ(0) translateX(100px) translateY(80vh);
-            }
-
-            80% {
-                transform: rotateY(180deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
-                -webkit-transform: rotateY(180deg) rotateX(0) translateZ(0) translateX(0) translateY(0);
-            }
-
-            100% {
-                transform: rotateY(0) rotateX(0) translateZ(0) translateX(0) translateY(0);
-                -webkit-transform: rotateY(0) rotateX(0) translateZ(0) translateX(0) translateY(0);
-            }
-        }
-
-
-
-        .card-hol {
-            animation-name: fly-in;
-            -webkit-animation-name: fly-in;
-            animation-duration: 7s;
-            -webkit-animation-duration: 7s;
-            animation-direction: alternate;
-            -webkit-animation-direction: alternate;
-            animation-iteration-count: infinite;
-            -webkit-animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-            -webkit-animation-timing-function: ease-in-out;
-        }
-
-        .card-holder:nth-of-type(1) {
-            animation-delay: .5s;
-            -webkit-animation-delay: .5s;
-        }
-
-        .card-holder:nth-of-type(2) {
-            animation-delay: 1s;
-            -webkit-animation-delay: 1s;
-        }
-
-        .card-holder:nth-of-type(3) {
-            animation-delay: 1.5s;
-            -webkit-animation-delay: 1.5s;
-        }
-
-        .card-holder:nth-of-type(4) {
-            animation-delay: 2s;
-            -webkit-animation-delay: 2s;
-        }
-
-        .card-holder:nth-of-type(5) {
-            animation-delay: 2.5s;
-            -webkit-animation-delay: 2.5s;
-        }
-
-        .card-holder:nth-of-type(6) {
-            animation-delay: 3s;
-            -webkit-animation-delay: 3s;
-        }
-
-        .card-holder:nth-of-type(7) {
-            animation-delay: 3.5s;
-            -webkit-animation-delay: 3.5s;
-        }
-
-        .card-holder:nth-of-type(8) {
-            -wenkit-animation-delay: 4s;
-            animation-delay: 4s;
-        }
-
-        .card-holder:nth-of-type(9) {
-            animation-delay: 4.5s;
-            -webkit-animation-delay: 4.5s;
-        }
-
-        .card-holder:nth-of-type(10) {
-            animation-delay: 5s;
-            -webkit-animation-delay: 5s;
-        }
-
-        /* 
-      body {
-        background: #000;
-        padding: 4% 10%;
-        perspective: 400px;
-        overflow-x: hidden;
-      } */
-
-        .card-holder {
-            transform-style: preserve-3d;
-            -webkit-transform-style: preserve-3d;
-            backface-visibility: visible;
-            -webkit-backface-visibility: visible;
-            position: relative;
-            width: 80px;
-            height: 130px;
-            display: inline-block;
-            /* box-shadow: 1px 2px 2px rgba(0, 0, 0, .4); */
-            border: none;
-            margin: 12px;
-            margin-top: 10%;
-            padding: 0px;
-        }
-
-        .card-holder:hover {
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
-        }
-
-        .card-holder:active {
-            transform: scale(.9);
-            -webkit-transform: scale(.9);
-        }
-
-        .back {
-            position: relative;
-            width: 100%;
-            height: 130px;
-            overflow-x: hidden;
-            /*change*/
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-            -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-            background-image: url('back.png');
-            border-radius: 2%;
-            background-size: 100%;
-            display: block;
-            background-repeat: no-repeat;
-
-        }
-
-        #tilt {
-            -webkit-transform: rotatez(-20deg);
-            transform: rotatez(-20deg);
-            /*hidden*/
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-            animation-name: tii;
-            position: absolute;
-            top: 50%;
-            animation-duration: 2s;
-            animation-direction: alternate;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-        }
-
-        @keyframes tii {
-            0% {
-                transform: rotateY(0deg) rotatez(-20deg) translateY(-50%);
-
-                -webkit-transform: rotateY(0deg) rotatez(-20deg) translateY(-50%);
-
-            }
-
-            100% {
-                transform: rotateY(360deg) rotatez(-20deg) translateY(-50%);
-
-                -webkit-transform: rotateY(360deg) rotatez(-20deg) translateY(-50%);
-
-            }
-        }
-
-        .card {
-
-            transform-style: preserve-3d;
-            -webkit-transform-style: preserve-3d;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            backface-visibility: visible;
-            -webkit-backface-visibility: visible;
-            background-color: transparent;
-            border-radius: 2%;
-            display: block;
-            width: 100%;
-            height: 100%;
-            border: none;
-
-        }
-
-        .card:after {
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-            position: absolute;
-            display: block;
-            content: '';
-            background-repeat: no-repeat;
-            /* background-size: cover; */
-            width: 100%;
-            height: 100%;
-        }
-
-
-        .card.hearts:after,
-        .card.hearts:before {
-            background-image:
-                url('p1.png');
-            background-size: 100%;
-
-        }
-
-        .card.clubs:after,
-        .card.clubs:before {
-
-
-            background-image:
-                url('8.png');
-            background-size: 100%;
-        }
-
-        .card.diamonds:after,
-        .card.diamonds:before {
-            background-image:
-                url('5.png');
-            background-size: 100%;
-        }
-
-        .card.spades:after,
-        .card.spades:before {
-
-            background-image:
-                url('4.png');
-            background-size: 100%;
-        }
-
-        .card.h:after,
-        .card.h:before {
-            background-image:
-                url('p2.png');
-            background-size: 100%;
-
-        }
-
-        .card.e:after,
-        .card.e:before {
-            background-image:
-                url('p3.png');
-            background-size: 100%;
-
-        }
-
-        .card.a:after,
-        .card.a:before {
-            background-image:
-                url('p4.png');
-            background-size: 100%;
-
-        }
-
-        .card.r:after,
-        .card.r:before {
-            background-image:
-                url('joker.png');
-            background-size: 100%;
-
-        }
     </style>
     </head>
 
@@ -387,8 +116,7 @@
                     <div class="col-lg-12 text-center">
                        <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark"
                             style="margin:8px">
-                          <spam class="textgra">  Bringing back retro <br>
-Bringing back the good old times!</spam>
+                          <spam class="textgra">  MINIMIZE BOREDOM! <br>MAXIMIZE FUN! </spam>
                         </h2>
                     </div><!-- col end -->
                 </div><!-- row end -->
@@ -399,11 +127,11 @@ Bringing back the good old times!</spam>
                         <p class="about-txt reveal-element" style="color:black">
                            <spam class="textgra" style="font-family: 'Conv_LemonMilk', sans-serif"> MINIMIZE</spam> is India’s first strategic card game and it’s not meant for everybody!
 <br><br>
-There’s only one condition you need to abide by to be eligible to play MINIMIZE - get off the internet, put your smart-phones away and sit down with friends and family for some old fashioned recreation.<br><br>
+The concept behind Minimize was to introduce a card game that connects people across all age groups. A game that can be used to bond over - be it family, friends or strangers. Hence a lot of time and effort has been spent to meet that fine middle ground.
+<br>
+                        <h2 class="section-heading spacer-line-vertical-dark reveal-element" style="color: black; font-size: 15px">June 2020</h2>
+<p class="about-txt reveal-element" style="color:black">MINIMIZE has been the starting point for us as a company and we are immensely grateful to all our customers #MinimizeFam who have helped us reach a level where we are moving towards the expansion of the company.
 
-MINIMIZE is the first of many card and board games that we plan to launch in the market, and we already have our priorities sorted – to bring back the times where all you needed for entertainment and recreation were your people, and not gadgets!<br><br>
-
-Buy your pack now and let’s Minimize!
                         </p>
                         <br><br>
                     </div><!-- col end -->
@@ -472,7 +200,7 @@ Buy your pack now and let’s Minimize!
                         <div class="col-sm-4">
                             <div class="contact-info-description">
                                 <h4>Contact</h4>
-                                <span>Akask Khanduja</span>
+                                <span>Founder: Akask Khanduja</span>
                                 <span>+91-7895977777</span>
                                 <span>akashkhanduja@minimizecards.com</span>
                                 <span>IVAK Entertainment Games LLP</span>
