@@ -1,24 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-        <meta charset="utf-8">
-        <title>
-            Minimize
-        </title>
-         <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-        <meta content="" name="description">
-        <meta content="" name="author">
-        <meta content="" name="keywords">
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-        <!-- Laxt v1.0 || ex nihilo || December 2017 - January 2018 -->
-        <!-- style start -->
-         <link href="css/css-plugins.css" media="all" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>
+        Minimize
+    </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <!-- Laxt v1.0 || ex nihilo || December 2017 - January 2018 -->
+    <!-- style start -->
+    <link href="css/css-plugins.css" media="all" rel="stylesheet" type="text/css">
     <link href="css/css-style.css" media="all" rel="stylesheet" type="text/css">
-        <!-- google fonts start -->
-        <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CMontserrat:400,700%7CPoppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel=
-        "stylesheet" type="text/css"><!-- google fonts end -->
+    <!-- google fonts start -->
+    <link
+        href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CMontserrat:400,700%7CPoppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" type="text/css"><!-- google fonts end -->
     <style>
         /*dk*/
 
@@ -45,15 +45,39 @@
 
             }
         }
-
-
     </style>
-    </head>
+</head>
+<a class="page-scroll" href="#top" onclick="aaa()" style="border:none;">
+    <div class="to-top-arrow" style="border:none;" id="aaaa" onclick="aaa()">
+        <img id="image" src="up.png" class="img-fluid" width="90%">
+    </div>
+</a>
+<script>
+    function aaa() {
+        var img = document.getElementById("image");
+        img.setAttribute("class", "rotated-image");
+
+        document.getElementById("aaaa").style.width = "2000px";
+        document.getElementById("aaaa").style.bottom = "2000px";
+        document.getElementById("aaaa").style.right = '0px';
+        document.getElementById("aaaa").style.transition = '3s';
+        document.getElementById("navvv").style.zIndex = "-1";
+        setTimeout(function () {
+            $("#aaaa").removeAttr("style");
+            // document.getElementById("overlay22").style.zIndex = "111";
+            $("#navvv").removeAttr("style");
+            var imgs = document.getElementById("image");
+            imgs.setAttribute("class", "rotate-image");
+
+        }, 2000);
+
+    }
+</script>
 
 
 <body id="top">
-        
-         <header id="navvv" class="container-fluid">
+
+    <header id="navvv" class="container-fluid">
         <div class="text-center hidden-xs">
             <!-- navigation start -->
             <nav class="header-navigation fadeIn-element">
@@ -79,70 +103,77 @@
             <!-- navigation mobile end -->
         </div>
     </header><!-- header section end -->
-        <!-- home section start -->
-        <section class="upper-page">
-            <!-- hero bg start -->
-            <div class="hero-fullscreen overlay overlay-top-bottom-dark-75">
-                <!-- single image start -->
-                <div class="hero-fullscreen-FIX">
-                    <div class="hero-bg bg-img-about"></div>
-                </div><!-- single image end -->
-            </div><!-- hero bg end -->
-            <!-- center container start -->
-            <div class="center-container">
-                <!-- center block start -->
-                <div class="center-block fadeIn-element">
-                    
-                    <h1 class="home-page-title">
-                       Let's Minimize
-                    </h1><!-- sign up launcher start -->
-                     
-                </div><!-- center block end -->
-            </div><!-- center container end -->
-            <!-- scroll indicator start -->
-            <div class="scroll-indicator-wrapper fadeIn-element">
-                <div class="scroll-indicator"></div>
-            </div><!-- scroll indicator end -->
-        </section><!-- home section end -->
-        <!-- sign up modal start -->
-         <!-- sign up modal end -->
-        <!-- about section start -->
-        <section class="section-light" id="about">
-            <!-- container start -->
-            <div class="container">
-                <!-- row start -->
-                <div class="row about-top">
-                    <!-- col start -->
-                    <div class="col-lg-12 text-center">
-                       <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark"
-                            style="margin:8px">
-                          <spam class="textgra">  MINIMIZE BOREDOM! <br>MAXIMIZE FUN! </spam>
-                        </h2>
-                    </div><!-- col end -->
-                </div><!-- row end -->
-                <!-- row start -->
-                <div class="row about-bottom">
-                    <!-- col start -->
-                    <div class="text-center">
-                        <p class="about-txt reveal-element" style="color:black">
-                           <spam class="textgra" style="font-family: 'Conv_LemonMilk', sans-serif"> MINIMIZE</spam> is India’s first strategic card game and it’s not meant for everybody!
-<br><br>
-The concept behind Minimize was to introduce a card game that connects people across all age groups. A game that can be used to bond over - be it family, friends or strangers. Hence a lot of time and effort has been spent to meet that fine middle ground.
-<br>
-                           <br><br> <span style="font-family: 'Conv_LemonMilk', sans-serif;color: black; font-size: 15px">June 2020</span> <br>
-<span class="about-txt reveal-element" style="color:black">MINIMIZE has been the starting point for us as a company and we are immensely grateful to all our customers #MinimizeFam who have helped us reach a level where we are moving towards the expansion of the company.<br>We will be launching a few exciting things in the coming months. Stay Tuned for the same.
-<br><br>Love &amp; Regards,
-<br>Akash Khanduja
+    <!-- home section start -->
+    <section class="upper-page">
+        <!-- hero bg start -->
+        <div class="hero-fullscreen overlay overlay-top-bottom-dark-75">
+            <!-- single image start -->
+            <div class="hero-fullscreen-FIX">
+                <div class="hero-bg bg-img-about"></div>
+            </div><!-- single image end -->
+        </div><!-- hero bg end -->
+        <!-- center container start -->
+        <div class="center-container">
+            <!-- center block start -->
+            <div class="center-block fadeIn-element">
+
+                <h1 class="home-page-title">
+                    Let's Minimize
+                </h1><!-- sign up launcher start -->
+
+            </div><!-- center block end -->
+        </div><!-- center container end -->
+        <!-- scroll indicator start -->
+        <div class="scroll-indicator-wrapper fadeIn-element">
+            <div class="scroll-indicator"></div>
+        </div><!-- scroll indicator end -->
+    </section><!-- home section end -->
+    <!-- sign up modal start -->
+    <!-- sign up modal end -->
+    <!-- about section start -->
+    <section class="section-light" id="about">
+        <!-- container start -->
+        <div class="container">
+            <!-- row start -->
+            <div class="row about-top">
+                <!-- col start -->
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark" style="margin:8px">
+                        <spam class="textgra"> MINIMIZE BOREDOM! <br>MAXIMIZE FUN! </spam>
+                    </h2>
+                </div><!-- col end -->
+            </div><!-- row end -->
+            <!-- row start -->
+            <div class="row about-bottom">
+                <!-- col start -->
+                <div class="text-center">
+                    <p class="about-txt reveal-element" style="color:black">
+                        <spam class="textgra" style="font-family: 'Conv_LemonMilk', sans-serif"> MINIMIZE</spam> is
+                        India’s first strategic card game and it’s not meant for everybody!
+                        <br><br>
+                        The concept behind Minimize was to introduce a card game that connects people across all age
+                        groups. A game that can be used to bond over - be it family, friends or strangers. Hence a lot
+                        of time and effort has been spent to meet that fine middle ground.
+                        <br>
+                        <br><br> <span
+                            style="font-family: 'Conv_LemonMilk', sans-serif;color: black; font-size: 15px">June
+                            2020</span> <br>
+                        <span class="about-txt reveal-element" style="color:black">MINIMIZE has been the starting point
+                            for us as a company and we are immensely grateful to all our customers #MinimizeFam who have
+                            helped us reach a level where we are moving towards the expansion of the company.<br>We will
+                            be launching a few exciting things in the coming months. Stay Tuned for the same.
+                            <br><br>Love &amp; Regards,
+                            <br>Akash Khanduja
 
                         </span>
                         <br><br>
-                    </div><!-- col end -->
-                </div><!-- row end -->
-            </div><!-- container end -->
-        </section><!-- about section end -->
-        
-        
-             <section class="footgra1" id="contact">
+                </div><!-- col end -->
+            </div><!-- row end -->
+        </div><!-- container end -->
+    </section><!-- about section end -->
+
+
+    <section class="footgra1" id="contact">
         <!-- container start -->
         <div class="container">
 
@@ -206,7 +237,7 @@ The concept behind Minimize was to introduce a card game that connects people ac
                                 <span>+91-7895977777</span>
                                 <span>akashkhanduja@minimizecards.com</span>
                                 <span>IVAK Entertainment Games LLP</span>
-                                
+
                                 <span>1st floor, 39 Maharani Bagh, GMS Road, Dehradun 248001 Uttarakhand</span>
 
                                 <br>
@@ -272,11 +303,12 @@ The concept behind Minimize was to introduce a card game that connects people ac
         </div>
         <!-- container end -->
     </section>
-     <script src="modernizr-1.6.min.js"></script>
-      <script src="js/9352-js-plugins.js">
+
+    <script src="modernizr-1.6.min.js"></script>
+    <script src="js/9352-js-plugins.js">
     </script>
     <script src="js/5083-js-laxt.js">
     </script>
-    </body>
+</body>
 
 </html>
