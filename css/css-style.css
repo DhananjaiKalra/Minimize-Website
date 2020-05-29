@@ -1944,6 +1944,10 @@ textarea:focus:-moz-placeholder {
   .contact-info-wrapper {
     margin: 98px 0 0 0;
   }
+
+  .coin {
+    margin: auto;
+  }
 }
 
 .contact-info-wrapper a,
@@ -1955,6 +1959,8 @@ textarea:focus:-moz-placeholder {
   color: #fff;
   text-align: left;
 }
+
+
 
 .contact-info-description span {
   display: block;
