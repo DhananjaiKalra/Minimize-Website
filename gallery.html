@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by gloopen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.css'>
+  <link rel="stylesheet" href="css/gallery-style.css">
+  <link rel="stylesheet" href="css/css-style.css">
+  <link href="css/css-plugins.css" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+    .coin {
+      animation-name: ring;
+      animation-duration: 3s;
+      width: 71px;
+      height: 55px;
+      background-image: url(images/logo.png);
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      transform-origin: center;
+
+    }
+
+    @keyframes ring {
+      from {
+
+        transform: rotatey(0deg);
+      }
+
+      to {
+        transform: rotatey(360deg);
+
+      }
+    }
+
+
+    .gallery {
+      padding-top: 10%;
+    }
+
+    .gallery-item {
+      margin: 15px;
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <header id="navvv" class="container-fluid">
+    <div class="text-center hidden-xs">
+      <!-- navigation start -->
+      <nav class="header-navigation fadeIn-element">
+        <!-- <a class="active link-underline-menu" href="index.html">Home</a> -->
+        <a class="link-underline-menu" href="about.html">About</a>
+        <a class="link-underline-menu" href="gallery.html">Gallery</a>
+        <span class="logo-holder "><a href="index.html"><img alt="Laxt" src="images/img-logo.png"></a></span>
+        <a class="link-underline-menu" href="contact.html">Contact</a>
+        <a target="_blank" href="https://www.amazon.in/dp/B079L7RYYL" class="shopnow">Buy</a>
+      </nav>
+      <!-- navigation end -->
+    </div>
+    <div class="text-center visible-xs">
+      <!-- navigation mobile start -->
+      <nav class="header-navigation-xs fadeIn-element">
+        <a class="logo-holder" href="index.html"><img alt="Laxt" src="images/img-logo.png"></a>
+        <!-- <a class="active link-underline-menu" href="index.html">Home</a> -->
+        <a class="link-underline-menu" href="about.html">About</a>
+        <a class="link-underline-menu" href="gallery.html">Gallery</a>
+        <a class="link-underline-menu" href="contact.html">Contact</a>
+        <a target="_blank" href="https://www.amazon.in/dp/B079L7RYYL" class="shopnow">Buy</a>
+      </nav>
+      <!-- navigation mobile end -->
+    </div>
+  </header><!-- header section end -->
+  <!-- home section start -->
+  < class="upper-page">
+    <!-- hero bg start -->
+    <div class="hero-fullscreen overlay overlay-top-bottom-dark-75">
+      <!-- single image start -->
+      <div class="hero-fullscreen-FIX">
+        <div class="hero-bg bg-img-gallery"></div>
+      </div><!-- single image end -->
+    </div><!-- hero bg end -->
+    <!-- center container start -->
+    <div class="center-container">
+      <!-- center block start -->
+      <div class="center-block fadeIn-element">
+
+        <h1 class="home-page-title">
+          Let's Minimize
+        </h1><!-- sign up launcher start -->
+
+      </div><!-- center block end -->
+    </div><!-- center container end -->
+    <!-- scroll indicator start -->
+    <div class="scroll-indicator-wrapper fadeIn-element">
+      <!-- <div class="scroll-indicator"></div> -->
+    </div><!-- scroll indicator end -->
+    <div id="overlay22" style="display:block;">
+      <div class="center-block fadeIn-element">
+
+        <h1 class=" visible-xs home-page-title">
+          <span style="color:rgba(255,207,64,0.7)">Down <br></span> <span style="color:rgba(255,0,0,0.5)">
+            the<br></span>
+          <spam style="color:rgba(100,151,177,0.7)">Memory Lane
+          </spam>
+        </h1>
+        <h1 class=" hidden-xs home-page-title">
+          <span style="color:rgba(255,207,64,0.7)">Down</span> <span style="color:rgba(255,0,0,0.5)"> the</span>
+          <spam style="color:rgba(100,151,177,0.7)">Memory Lane
+          </spam>
+        </h1>
+      </div>
+    </div>
+    </section>
+    <section
+      style="box-shadow:inset 1px 100px 550px rgba(0,0,0,0.78),inset 2px 200px 750px rgba(0,0,0,0.88),inset 3px 250px 950px rgba(0,0,0,0.98);">
+      <!-- partial:index.partial.html -->
+      <center>
+        <p class="textgra" style="font-size:7em;padding-top:5%;">Gallery</p>
+      </center>
+      <div class="gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
+
+        <figure class="gallery-item horizontal" itemprop="associatedMedia" itemscope=""
+          itemtype="http://schema.org/ImageObject"><a href="gallery/1.jpg" itemprop="contentUrl"
+            data-size="4000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%202000%201000'%20%2F%3E"
+              data-src="gallery/1.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/2.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/2.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/3.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/3.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/4.jpg" itemprop="contentUrl" data-size="2160x2160"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201080%201080'%20%2F%3E"
+              data-src="gallery/4.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/5.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/5.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/6.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/6.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/7.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/7.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/8.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/8.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/9.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/9.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/10.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/10.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/11.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/11.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/12.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/12.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/14.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/14.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/15.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/15.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/16.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/16.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/17.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/17.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/18.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/18.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/19.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/19.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/20.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/20.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/21.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/21.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/22.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/22.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/23.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/23.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/24.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/24.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/25.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/25.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/26.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/26.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/27.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/27.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+        <figure class="gallery-item" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a
+            href="gallery/28.jpg" itemprop="contentUrl" data-size="2000x2000"><img class="lazyload lazypreload fadein"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http://www.w3.org/2000/svg'%20viewBox%3D'0%200%201000%201000'%20%2F%3E"
+              data-src="gallery/28.jpg" itemprop="thumbnail" alt="Image description" /></a></figure>
+      </div>
+      <!-- Root element of PhotoSwipe. Must have class pswp.-->
+      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!--
+  Background of PhotoSwipe.
+  It's a separate element as animating opacity is faster than rgba().
+  -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden.-->
+        <div class="pswp__scroll-wrap">
+          <!--
+    Container that holds slides.
+    PhotoSwipe keeps only 3 of them in the DOM to save memory.
+    Don't modify these 3 pswp__item elements, data is added later on.
+    -->
+          <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+          </div>
+          <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed.-->
+          <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+              <!-- Controls are self-explanatory. Order can be changed.-->
+              <div class="pswp__counter"></div>
+              <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+              <button class="pswp__button pswp__button--share" title="Share"></button>
+              <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+              <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+              <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR-->
+              <!-- element will get class pswp__preloader--active when preloader is running-->
+              <div class="pswp__preloader">
+                <div class="pswp__preloader__icn">
+                  <div class="pswp__preloader__cut">
+                    <div class="pswp__preloader__donut"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+              <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+              <div class="pswp__caption__center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footgra1" id="contact">
+      <!-- container start -->
+      <div class="container">
+
+        <div class="row">
+          <!-- col start -->
+          <div class="col-lg-12 text-center">
+            <!-- contact info start -->
+            <div class="contact-info-wrapper reveal-element">
+              <!-- col start -->
+              <div class="col-sm-4">
+                <div class="contact-info-description">
+                  <!--dk-->
+                  <div class="coin"></div> <img src="images/logo1.png">
+                  <p class="logo-p"> Marketed by
+                    <br> ivak entertainment games llp<br>
+                    <br>Website Developed by: <br><a id="a" href="http://rajatktakportfolio.000webhostapp.com/">Rajat
+                      Tak</a> & <a id="a" href="https://www.linkedin.com/in/dhananjaikalra/">Dhananjai Kalra</a>
+
+                </div>
+              </div>
+              <!-- col end -->
+              <!-- col start -->
+              <div class="col-sm-4">
+                <div class="contact-info-description">
+                  <h4>Instagram</h4>
+
+                  <ul class="ins-ul">
+                    <li>
+                      <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                          src="images/img-ins1.jpg"></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                          src="images/img-ins2.jpg"></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                          src="images/img-ins3.jpg"></a>
+                    </li>
+                    <li style="width:100%; padding:0;display:block;">
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                          src="images/img-ins4.jpg"></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                          src="images/img-ins5.jpg"></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                          src="images/img-ins6.jpg"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- col end -->
+              <!-- col start -->
+              <div class="col-sm-4">
+                <div class="contact-info-description">
+                  <h4>Contact</h4>
+                  <span>Founder: Akask Khanduja</span>
+                  <span>+91-7895977777</span>
+                  <span>akashkhanduja@minimizecards.com</span>
+                  <span>IVAK Entertainment Games LLP</span>
+
+                  <span>1st floor, 39 Maharani Bagh, GMS Road, Dehradun 248001 Uttarakhand</span>
+
+                  <br>
+                  <!--/*<span>Ivnish Juneja</span>
+
+              <span>+918218092664</span>
+
+              <span>ivnish@minimizecards.com</span>
+
+<br>
+
+              <span>Akash Khanduja</span>
+
+              <span>+917895977777</span>
+
+              <span>akashkhanduja@minimizecards.com</span>*/-->
+                </div>
+              </div>
+              <!-- col end -->
+            </div>
+            <!-- contact info end -->
+          </div>
+          <!-- col end -->
+        </div>
+        <!-- row end -->
+
+        <div class="row">
+          <!-- col start -->
+          <div class="col-lg-12">
+            <!-- social icons start -->
+            <!-- social icons end -->
+            <!-- copyright start -->
+            <div class="copyright ">
+              <p>Minimize &copy; 2018 All Rights Reserved.</p>
+              <div class="social-icons-wrapper reveal-element">
+                <ul class="social-icons">
+                  <li class="social-icon">
+                    <a target="_blank" href="https://www.facebook.com/minimizeindia/"><img src="images/img-fb1.png"></a>
+                  </li>
+                  <li class="social-icon">
+                    <a target="_blank" href="https://www.instagram.com/minimizecards/"><img
+                        src="images/img-ins1.png"></a>
+                  </li>
+                  <li class="social-icon">
+                    <a target="_blank" href="https://twitter.com/minimize_in"><img src="images/img-t1.png"></a>
+                  </li>
+                  <li class="social-icon">
+                    <a target="_blank"
+                      href="https://www.youtube.com/channel/UCvs6RPLcve4zONFzbMdqQmg?guided_help_flow=3&amp;disable_polymer=true"><img
+                        src="images/img-yt1.png"></a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+            <!-- copyright end -->
+          </div>
+          <!-- col end -->
+        </div>
+        <!-- row end -->
+      </div>
+      <!-- container end -->
+    </section>
+
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.2/lazysizes.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.js'></script>
+    <script src="js/gallery-script.js"></script>
+    <script src="modernizr-1.6.min.js"></script>
+    <script src="js/9352-js-plugins.js">
+    </script>
+    <script src="js/5083-js-laxt.js">
+    </script>
+</body>
+<a class="page-scroll" href="#top" onclick="aaa()" style="border:none;">
+  <div class="to-top-arrow" style="border:none;" id="aaaa" onclick="aaa()">
+    <img id="image" src="up.png" class="img-fluid" width="90%">
+  </div>
+</a>
+<script>
+  function aaa() {
+    var img = document.getElementById("image");
+    img.setAttribute("class", "rotated-image");
+
+    document.getElementById("aaaa").style.width = "2000px";
+    document.getElementById("aaaa").style.bottom = "2000px";
+    document.getElementById("aaaa").style.right = '0px';
+    document.getElementById("aaaa").style.transition = '3s';
+    document.getElementById("navvv").style.zIndex = "-1";
+    setTimeout(function () {
+      $("#aaaa").removeAttr("style");
+      // document.getElementById("overlay22").style.zIndex = "111";
+      $("#navvv").removeAttr("style");
+      var imgs = document.getElementById("image");
+      imgs.setAttribute("class", "rotate-image");
+
+    }, 2000);
+
+  }
+</script>
+
+</html>

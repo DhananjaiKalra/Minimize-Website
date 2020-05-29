@@ -425,10 +425,25 @@ object {
   background-size: cover;
 }
 
-.bg-img-about {
-  background-image: url(../images/background-about.png);
+#a {
+  text-decoration: underline;
 }
 
+.bg-img-about {
+  background-image: url('..//bg1.jpg');
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* background-size: 100%; */
+  background-position: bottom;
+}
+
+.bg-img-gallery {
+  background-image: url('..//bg.jpg');
+  background-repeat: no-repeat;
+  /* background-size: 100%; */
+  height: 100vh;
+  background-position: bottom;
+}
 
 .bg-img-blog {
   background-image: url(../images/background-blog.png);
