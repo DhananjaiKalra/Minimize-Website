@@ -432,8 +432,8 @@ object {
 .bg-img-about {
   background-image: url('..//bg1.jpg');
   background-repeat: no-repeat;
-  height: 100vh;
-  /* background-size: 100%; */
+  /* height: 100vh; */
+  background-size: cover;
   background-position: bottom;
 }
 
@@ -441,7 +441,8 @@ object {
   background-image: url('..//bg.jpg');
   background-repeat: no-repeat;
   /* background-size: 100%; */
-  height: 100vh;
+  /* height: 100vh; */
+  background-size: cover;
   background-position: bottom;
 }
 
