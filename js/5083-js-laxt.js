@@ -40,25 +40,25 @@
 */
 
 
-$(function() {
+$(function () {
     "use strict";
-	
-	
-    $(window).on("load", function() {
+
+
+    $(window).on("load", function () {
         // 1. preloader
         $("#preloader").fadeOut(600);
         $(".preloader-bg").delay(400).fadeOut(600);
-		
+
         // 2. fadeIn.element
-        setTimeout(function() {
+        setTimeout(function () {
             $(".fadeIn-element").delay(600).css({
                 display: "none"
             }).fadeIn(800);
         }, 0);
     });
-	
+
     // 3. navigation
-    $('a[href*="#"]:not([href="#"])').on("click", function() {
+    $('a[href*="#top"]:not([href="#top"])').on("click", function () {
         console.log("click");
         if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -71,8 +71,8 @@ $(function() {
             }
         }
     });
-	
-    $(window).on("scroll", function() {
+
+    $(window).on("scroll", function () {
         // 4. switchers
         // 4.1. header navigation mobile and logo color switch
         if ($(this).scrollTop() > 5) {
@@ -98,20 +98,20 @@ $(function() {
         } else {
             $("header .header-navigation .logo-holder").addClass("closed");
         }
-		
+
         // 5. to top arrow animation
         if ($(this).scrollTop() > 400) {
             $(".to-top-arrow").addClass("show");
         } else {
             $(".to-top-arrow").removeClass("show");
         }
-		
+
         // 6. home fadeOut animation
         $("h1.home-page-title, h2.home-page-title, .sign-up-button").css("opacity", 1 - $(window).scrollTop() / 500);
     })
-	
+
     // 7. countdown
-    $(document).on("ready", function() {
+    $(document).on("ready", function () {
         // 7.1. countdown timer
         $(".countdown").countdown({
             until: new Date(Date.parse(setting.counter.lastDate)),
@@ -126,13 +126,13 @@ $(function() {
             timeZone: null
         }
     };
-	
+
     // 8. forms
     // 8.1. contact form
-    $("form#form").on("submit", function() {
+    $("form#form").on("submit", function () {
         $("form#form .error").remove();
         var s = !1;
-        if ($(".requiredField").each(function() {
+        if ($(".requiredField").each(function () {
                 if ("" === jQuery.trim($(this).val())) $(this).prev("label").text(), $(this).parent().append('<span class="error">This field is required</span>'), $(this).addClass(
                     "inputError"), s = !0;
                 else if ($(this).hasClass("email")) {
@@ -141,12 +141,12 @@ $(function() {
                         "inputError"), s = !0);
                 }
             }), !s) {
-            $("form#form input.submit").fadeOut("normal", function() {
+            $("form#form input.submit").fadeOut("normal", function () {
                 $(this).parent().append("");
             });
             var r = $(this).serialize();
-            $.post($(this).attr("action"), r, function() {
-                $("form#form").slideUp("fast", function() {
+            $.post($(this).attr("action"), r, function () {
+                $("form#form").slideUp("fast", function () {
                     $(this).before('<div class="success">Your email was sent successfully.</div>');
                 });
             });
@@ -154,10 +154,10 @@ $(function() {
         return !1;
     });
     // 8.2. newsletter form
-    $("form#subscribe").on("submit", function() {
+    $("form#subscribe").on("submit", function () {
         $("form#subscribe .subscribe-error").remove();
         var s = !1;
-        if ($(".subscribe-requiredField").each(function() {
+        if ($(".subscribe-requiredField").each(function () {
                 if ("" === jQuery.trim($(this).val())) $(this).prev("label").text(), $(this).parent().append('<span class="subscribe-error">Please enter your Email</span>'),
                     $(this).addClass("inputError"), s = !0;
                 else if ($(this).hasClass("subscribe-email")) {
@@ -166,22 +166,22 @@ $(function() {
                         $(this).addClass("inputError"), s = !0);
                 }
             }), !s) {
-            $("form#subscribe input.submit").fadeOut("normal", function() {
+            $("form#subscribe input.submit").fadeOut("normal", function () {
                 $(this).parent().append("");
             });
             var r = $(this).serialize();
-            $.post($(this).attr("action"), r, function() {
-                $("form#subscribe").slideUp("fast", function() {
+            $.post($(this).attr("action"), r, function () {
+                $("form#subscribe").slideUp("fast", function () {
                     $(this).before('<div class="subscribe-success">Thank you for subscribing.</div>');
                 });
             });
         }
         return !1;
     });
-	
+
     // 9. modals
     // 9.1. sign up modal
-    $(".sign-up-modal-launcher, .sign-up-modal-closer").on("click", function() {
+    $(".sign-up-modal-launcher, .sign-up-modal-closer").on("click", function () {
         if ($(".sign-up-modal").hasClass("open")) {
             $(".sign-up-modal").removeClass("open");
             $(".sign-up-modal").addClass("close");
@@ -191,12 +191,12 @@ $(function() {
         }
     });
     // 9.1.1. sign up modal additional CLOSER
-    $(".header-navigation a, .header-navigation-xs a").on("click", function() {
+    $(".header-navigation a, .header-navigation-xs a").on("click", function () {
         $(".sign-up-modal").removeClass("open");
         $(".sign-up-modal").addClass("close");
     });
     // 9.2. contact modal
-    $(".contact-modal-launcher, .contact-modal-closer").on("click", function() {
+    $(".contact-modal-launcher, .contact-modal-closer").on("click", function () {
         if ($(".contact-modal").hasClass("open")) {
             $(".contact-modal").removeClass("open");
             $(".contact-modal").addClass("close");
@@ -206,15 +206,15 @@ $(function() {
         }
     });
     // 9.2.1. contact modal additional CLOSER
-    $(".header-navigation a, .header-navigation-xs a").on("click", function() {
+    $(".header-navigation a, .header-navigation-xs a").on("click", function () {
         $(".contact-modal").removeClass("open");
         $(".contact-modal").addClass("close");
     });
-	
-	// 10. YouTube player
+
+    // 10. YouTube player
     $("#background-video").YTPlayer({
         videoId: "3zXrWmkVjTM", // DEMO URL is: https://www.youtube.com/watch?v=3zXrWmkVjTM
-        mute: true,             // options: true, false
+        mute: true, // options: true, false
         pauseOnScroll: false,
         repeat: true,
         fitToBackground: true,
@@ -229,9 +229,9 @@ $(function() {
             autohide: 0
         }
     });
-	
-	// 11. slick slider
-	// 11.1. slick fullscreen slideshow ZOOM/FADE
+
+    // 11. slick slider
+    // 11.1. slick fullscreen slideshow ZOOM/FADE
     $(".slick-fullscreen-slideshow-zoom-fade").slick({
         arrows: false,
         initialSlide: 0,
@@ -251,9 +251,9 @@ $(function() {
         pauseOnFocus: false,
         pauseOnHover: false
     });
-	
-	// 12. owl slider
-	// 12.1. owl home IMG carousel slider
+
+    // 12. owl slider
+    // 12.1. owl home IMG carousel slider
     $("#home-page-img-carousel").owlCarousel({
         loop: true,
         center: true,
@@ -277,9 +277,9 @@ $(function() {
             }
         }
     });
-	
-	// 13. swiper slider
-	// 13.1. swiper parallax slider
+
+    // 13. swiper slider
+    // 13.1. swiper parallax slider
     var swiper = new Swiper(".parallax .swiper-container", {
         autoplay: 4000,
         speed: 800,

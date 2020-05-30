@@ -21,8 +21,30 @@
     <link
         href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CMontserrat:400,700%7CPoppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet" type="text/css"><!-- google fonts end -->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="icon" href="img/logo0.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/abc.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
     <style>
         /*dk*/
+        .justify {
+            text-align: justify;
+            font-weight: bold;
+        }
 
         .coin {
             animation-name: ring;
@@ -48,11 +70,135 @@
 
             }
         }
+
+        #accordion .card {
+            font-size: 15px;
+            border-color: #dee2e6;
+            text-align: justify;
+        }
+
+        #accordion .card h5 a {
+            display: block;
+            text-align: left;
+            text-decoration: none;
+            color: #11cbd7;
+            position: relative;
+            -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            text-align: justify;
+        }
+
+        #accordion .card h5 a .icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            -webkit-transform: translateY(-50%) rotate(-180deg);
+            -ms-transform: translateY(-50%) rotate(-180deg);
+            transform: translateY(-50%) rotate(-180deg);
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+            color: #000;
+        }
+
+        #accordion .card h5 a:hover {
+            text-decoration: none;
+            -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        #accordion .card h5 a.collapsed {
+            color: #000;
+            -webkit-box-shadow: none;
+            text-align: justify;
+            box-shadow: none;
+        }
+
+        #accordion .card h5 a.collapsed .icon {
+            right: 20px;
+            color: #000;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        #accordion .card h5 a.collapsed:hover {
+            text-decoration: none;
+            -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        #accordion .card .card-body {
+            text-align: justify;
+            padding-top: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .form-wrap {
+                padding: 50px;
+            }
+        }
+
+        .block-8 .accordion-item .heading {
+            font-size: 16px;
+            font-weight: 400;
+            padding: 10px 0;
+        }
+
+        .block-8 .accordion-item .heading>a {
+            padding-left: 35px;
+            position: relative;
+            color: #000;
+        }
+
+        .block-8 .accordion-item .heading>a:before {
+            width: 20px;
+            height: 20px;
+            line-height: 18px;
+            border: 1px solid #000;
+            text-align: center;
+            font-size: 18px;
+            top: .1em;
+
+            left: 0;
+            font-family: 'Ionicons';
+        }
+
+        .block-8 .accordion-item .heading>a[aria-expanded="true"]:before {
+            position: absolute;
+            content: "\f126";
+            font-size: 12px;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+            background-image: url('images/textgra.png');
+            background-size: 55%;
+            color: #fff;
+            border: 1px solid #11cbd7;
+        }
+
+        .block-8 .accordion-item .heading>a[aria-expanded="false"]:before {
+            content: "\f123";
+            font-size: 12px;
+            color: #000;
+            position: absolute;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+        }
+
+        .block-8 .accordion-item .body-text {
+            font-size: 16px;
+            padding: 5px 0;
+            padding-left: 30px;
+        }
     </style>
 </head>
 <a class="page-scroll" href="#top" onclick="aaa()" style="border:none;">
     <div class="to-top-arrow" style="border:none;" id="aaaa" onclick="aaa()">
-        <img id="image" src="up.png" class="img-fluid" width="90%">
+        <img id="image" src="images/up.png" class="img-fluid" width="90%">
     </div>
 </a>
 <script>
@@ -137,20 +283,22 @@
             <div class="center-block fadeIn-element">
 
                 <h1 class=" visible-xs home-page-title">
-                  <span style="color:rgba(255,207,64,0.7)">FREQUENTLY</span> 
-                       
+                    <span style="color:rgba(255,207,64,0.7)">FREQUENTLY</span>
+
                     <spam style="color:rgba(100,151,177,0.7)">ASKED
                     </spam>
-                    <br><spam style="color:rgba(255,0,0,0.7)">QUESTIONS
+                    <br>
+                    <spam style="color:rgba(255,0,0,0.7)">QUESTIONS
                     </spam>
 
                 </h1>
                 <h1 class=" hidden-xs home-page-title">
-                    <span style="color:rgba(255,207,64,0.7)">FREQUENTLY</span> 
-                      <br> 
+                    <span style="color:rgba(255,207,64,0.7)">FREQUENTLY</span>
+                    <br>
                     <spam style="color:rgba(100,151,177,0.7)">ASKED
                     </spam>
-                    <br><spam style="color:rgba(255,0,0,0.7)">QUESTIONS
+                    <br>
+                    <spam style="color:rgba(255,0,0,0.7)">QUESTIONS
                     </spam>
                 </h1>
             </div>
@@ -165,95 +313,471 @@
             <!-- row start -->
             <div class="row about-top">
                 <!-- col start -->
-              <!-- col end -->
+                <!-- col end -->
             </div><!-- row end -->
             <!-- row start -->
             <div class="row about-bottom">
                 <!-- col start -->
                 <div class="text-center">
                     <div class="er">
-                    <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark" style="margin:8px">
-                        <spam class="textgra"> Discarding &amp; Drawing Cards</spam>
-                    </h2>
-                    <p class="about-txt reveal-element" style="color:#333;text-align: justify;width: 100%;color:#333">
-                      <ul class="about-txt reveal-element text-dark "
-                                    style="list-style-type:circle; text-align: justify;width:100%;font-weight: bold;color:#333">
-                            <li>Should I throw first or pick up a card first?</li>
-                            Every turn comprises of 1st throwing a card or cards and then picking up a card.
-                           <br><br> <li>Can I pick up a wild card from the discard pile?</li>
-                            A wild card can never be picked up from the discard pile.
-                            <br><br><li>Can I pick up a Joker from the discard pile?</li>
-                            A Joker can be picked up from the discard pile.
-                            <br><br><li>Can I discard same color cards together?</li>
-                            Same color cards can only be discarded together if they are in a sequence (minimum 3 cards) or have the same number. Random number cards with same color cannot be discarded (Not allowed: 5 Red-8 Red-9Red).
-                            <br><br><li>How many cards can I draw in a turn?</li>
-                            Only 1 card can be drawn by the player in their turn that too after they have discarded card or cards. Every turn comprises of 1st throwing a card or cards and then picking up a card.
-                            <br><br><li>Which cards can I draw from the discarded pile in case the previous player has thrown a sequence/set of cards?</li>
-                            Only the top most or the bottom most card of the sequence/set of cards thrown by the previous player, i.e. if the player threw the sequence 7-8-9 then either 7 or 9 can only be picked, if the player threw 5(Red) - 5 (Green) – 5(Blue) then only 5(Red) or 5(Blue) can be picked by the player.
-                        </ul>
-                    
-                   
-                    <br><br><br>
-                     
-                      
-                  <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark" style="margin:8px">
-                        <spam class="textgra"> Power Cards</spam>
-                    </h2>
-                    <p class="about-txt reveal-element" style="color:#333;text-align: justify;width: 100%;color:#333">
-                      <ul class="about-txt reveal-element text-dark "
-                                    style="list-style-type:circle; text-align: justify;width:100%;font-weight: bold;color:#333">
-                         <li>How should I use ‘I Declare Now’ card?</li>
-                        <u>Without ‘I Declare Now’: </u><br>
-                         Player Turn: Cards in Hand – 1, 3 &amp; 8- Total Value = 12<br>
-                         Throws 8 &amp; Picks up a 2<br>
-                         Cards in Hand- 1, 3 &amp; 2- Total Value = 6(i.e. less than 7)<br>
-                         Now the other players will play their turns and once the round comes back to the player, he/she may declare.<br><br>
-                         <u>With ‘I Declare Now’:</u><br>
-                         Player Turn: Cards in Hand – 1, 3, 8 &amp; <u>‘I Declare Now Card’</u>- Total Value = 12<br>
-                         Throws 8 &amp; Picks up a 2
-                         Cards in Hand- 1, 3, 2 &amp; I Declare Now- Total Value = 6(i.e. less than 7)<br>
-                         The player can now declare right away without waiting for the round to come back to him/her.<br>
-                         The benefit of ‘I Declare Now’ is that the player does not have to wait for other players to play their turns and then for his/her turn to come back. He/she can declare in a single turn itself.
-                         <br><br><li>What if I pick ‘I Declare Now’ in my turn and my point value is 7 or less than 7, can I Declare in that turn itself?</li>
-                         Yes.
-                         <br>Player Turn: Cards in Hand – 1, 3 &amp; 8- Total Value = 12
-                         <br>Throws 8 &amp; Picks up an <u>‘I Declare Now’</u>
-                         <br>Cards in Hand- 1, 3 &amp; <u>I Declare Now</u>- Total Value = 4(i.e. less than 7)
-                         <br>The player can now declare right away without waiting for the round to come back to him/her.
-                         <br><br><li>Can I throw the My Half Value Card?</li>
-                         My Half Value card should be held by the player till the end of the game. There is no need to discard the My Half Value Card as it is beneficial for the player to hold it till the game ends.
-                         <br><br><li>What if the point total of my cards is 14 and I also have a My Half Value card?</li>
-                         In such a case the point total value of the cards is 7. Hence the player has a choice to declare.
-                         <br><br><li>What if I have 2 My Half Value Cards with a point total of 14 in my hand?</li> 
-                         In such a case the point total value of the cards is 3.5. Hence the player has a choice to declare.(14/2=7 &amp; 7/2-= 3.5)
-                         <br><br><li>Can I throw I Don’t Pick Card/I Discover Now Card alone?</li>
-                         ‘I Don’t Pick card’ can be thrown only along with other numeric cards. This is also applicable to ‘I Discover Now’ card. 
-                         <br><br><li>Can I pick a power card from the discarded pile after using I Discover Now card?</li>
-                         Picking up a power card from the discarded pile is not allowed at any point of the game. The player can pick up numeric cards or the joker card only from the discarded pile.
-                    </ul>
-                    
-                    <br><br><br>
-                    
-                      <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark" style="margin:8px">
-                        <spam class="textgra"> Declaring &amp; Scoring</spam>
-                    </h2>
-                    <p class="about-txt reveal-element" style="color:#333;text-align: justify;width: 100%;color:#333">
-                      <ul class="about-txt reveal-element text-dark "
-                                    style="list-style-type:circle; text-align: justify;width:100%;font-weight: bold;color:#333">
-                        <li>What if I am not left with any cards in my hand after my turn?</li>
-                        In this case the player has to declare when his/her turn comes back. If any other player also has zero points (the other player is holding a power card or joker) then both shall be termed as winners. This is only in case of zero points. In any other scenario the player declaring should have a point total lower than all other players.
-                        <br><br><li>What if I am left with joker card(s) or/and with one or more power cards?</li>
-                        In such a case as the point total of the player is zero, he/she may declare. This is the lowest point total a player can have in the game hence will never lose the game if he/she has the above mentioned cards.
-                        <br><br><li>What if on declaration I have the same point total value as another player?</li>
-                        The person who declared gets a penalty of 25 points as he/she doesn’t have the lowest point total and the player with the lowest point total wins the game. If no player has a point total less than the player who declared, the player with point total equal to the player who declared wins the game. 
-                    </ul>
-                    
-                    
-                      
+                        <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark"
+                            style="margin:8px">
+                            <spam class="textgra"> Discarding &amp; Drawing Cards</spam>
+                        </h2>
+                        <div clas="site-section element-animate">
+                            <div class="container">
+                                <div class="row  mb-5" style="text-align: justify;">
+                                    <div class="col-md-7 text-center section-heading">
+                                        <!-- <h2 class="text-primary heading">Frequently Ask Questions</h2> -->
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="accordion block-8" id="accordion">
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseOne"
+                                                        role="button" aria-expanded="true" style="text-align:left;"
+                                                        aria-controls="collapseOne">Should I
+                                                        throw first or pick up a card first?<span
+                                                            class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">Every turn comprises of 1st
+                                                            throwing a card or cards and then
+                                                            picking up a card.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- .accordion-item -->
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseTwo"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapseTwo">Can I
+                                                        pick up a wild card from the discard pile?<span
+                                                            class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">A wild card can never be picked up from the
+                                                            discard pile.
+                                                        </p>
+
+
+                                                    </div>
+                                                </div>
+                                            </div> <!-- .accordion-item -->
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseThree"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapseThree">Can I
+                                                        pick up a Joker from the discard pile?
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">A Joker can be picked up from the discard
+                                                            pile.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- .accordion-item -->
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseFour"
+                                                        role="button" aria-expanded="false" aria-controls="collapseFour"
+                                                        style="text-align: justify;"> Can I discard same color cards
+                                                        together?
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseFour" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">Same color cards can only be discarded
+                                                            together if they are
+                                                            in a sequence
+                                                            (minimum 3 cards) or have the same number. Random number
+                                                            cards with same color
+                                                            cannot be discarded (Not allowed: 5 Red-8 Red-9Red).</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapsefive"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapsefive">How many
+                                                        cards can I draw in a turn?
+
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapsefive" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">Only 1 card can be drawn by the player in
+                                                            their turn that too
+                                                            after they have
+                                                            discarded card or cards. Every turn comprises of 1st
+                                                            throwing a card or cards
+                                                            and then picking up a card.
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapsesix"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapsesix">Which
+                                                        cards can I draw from the discarded pile in case the previous
+                                                        player has thrown a
+                                                        sequence/set of cards?
+
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapsesix" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">Only the top most or the bottom most card of
+                                                            the sequence/set
+                                                            of cards thrown by
+                                                            the previous player, i.e. if the player threw the sequence
+                                                            7-8-9 then either 7
+                                                            or 9 can only be picked, if the player threw 5(Red) - 5
+                                                            (Green) – 5(Blue) then
+                                                            only 5(Red) or 5(Blue) can be picked by the player.
+
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <br><br><br>
+
+
+                        <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark"
+                            style="margin:8px">
+                            <spam class="textgra"> Power Cards</spam>
+                        </h2>
+                        <div clas="site-section element-animate">
+                            <div class="container">
+                                <div class="row  mb-5" style="text-align: justify;">
+                                    <div class="col-md-7 text-center section-heading">
+                                        <!-- <h2 class="text-primary heading">Frequently Ask Questions</h2> -->
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="accordion block-8" id="accordion">
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseOneone"
+                                                        role="button" aria-expanded="true" style="text-align:left;"
+                                                        aria-controls="collapseOneone">How should I use ‘I Declare Now’
+                                                        card?
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseOneone" class="collapse show"
+                                                    aria-labelledby="headingOne" data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">Without ‘I Declare Now’:<br>
+                                                            Player Turn: Cards in Hand – 1, 3 & 8- Total Value = 12
+                                                            Throws 8 & Picks up a 2
+                                                            Cards in Hand- 1, 3 & 2- Total Value = 6(i.e. less than 7)
+                                                            Now the other players will play their turns and once the
+                                                            round comes back to the player, he/she may declare.
+                                                            <br><br>With ‘I Declare Now’:<br>
+                                                            Player Turn: Cards in Hand – 1, 3, 8 & ‘I Declare Now Card’-
+                                                            Total Value = 12
+                                                            Throws 8 & Picks up a 2 Cards in Hand- 1, 3, 2 & I Declare
+                                                            Now- Total Value = 6(i.e. less than 7)
+                                                            The player can now declare right away without waiting for
+                                                            the round to come back to him/her.
+                                                            The benefit of ‘I Declare Now’ is that the player does not
+                                                            have to wait for other players to play their turns and then
+                                                            for his/her turn to come back. He/she can declare in a
+                                                            single turn itself.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- .accordion-item -->
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseTwoone"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapseTwoone">What if I pick ‘I Declare Now’ in
+                                                        my turn and my point value is 7 or less than 7, can I Declare in
+                                                        that turn itself?
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseTwoone" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">Yes.
+                                                            Player Turn: Cards in Hand – 1, 3 & 8- Total Value = 12
+                                                            Throws 8 & Picks up an ‘I Declare Now’
+                                                            Cards in Hand- 1, 3 & I Declare Now- Total Value = 4(i.e.
+                                                            less than 7)
+                                                            The player can now declare right away without waiting for
+                                                            the round to come back to him/her.
+
+
+                                                        </p>
+
+
+                                                    </div>
+                                                </div>
+                                            </div> <!-- .accordion-item -->
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseThreeone"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapseThreeone">Can I throw the My Half Value
+                                                        Card?
+
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseThreeone" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">My Half Value card should be held by the
+                                                            player till the end of the game. There is no need to discard
+                                                            the My Half Value Card as it is beneficial for the player to
+                                                            hold it till the game ends.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- .accordion-item -->
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseFourone"
+                                                        role="button" aria-expanded="false"
+                                                        aria-controls="collapseFourone" style="text-align: justify;">
+                                                        What if the point total of my cards is 14 and I also have a My
+                                                        Half Value card?
+
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseFourone" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">In such a case the point total value of the
+                                                            cards is 7. Hence the player has a choice to declare.
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapsefiveone"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapsefiveone">What if I have 2 My Half Value
+                                                        Cards with a point total of 14 in my hand?
+
+
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapsefiveone" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">In such a case the point total value of the
+                                                            cards is 3.5. Hence the player has a choice to
+                                                            declare.(14/2=7 & 7/2-= 3.5)
+
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapsesixone"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapsesixone">Can I throw I Don’t Pick Card/I
+                                                        Discover Now Card alone?
+
+
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapsesixone" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">‘I Don’t Pick card’ can be thrown only along
+                                                            with other numeric cards. This is also applicable to ‘I
+                                                            Discover Now’ card.
+
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapsesevenone"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapsesevenone">Can I pick a power card from
+                                                        the discarded pile after using I Discover Now card?
+
+
+
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapsesevenone" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">Picking up a power card from the discarded
+                                                            pile is not allowed at any point of the game. The player can
+                                                            pick up numeric cards or the joker card only from the
+                                                            discarded pile.
+
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br><br>
+
+                        <h2 class="section-heading spacer-line-vertical-dark reveal-element text-dark"
+                            style="margin:8px">
+                            <spam class="textgra"> Declaring &amp; Scoring</spam>
+                        </h2>
+
+
+                        <div clas="site-section element-animate">
+                            <div class="container">
+                                <div class="row  mb-5" style="text-align: justify;">
+                                    <div class="col-md-7 text-center section-heading">
+                                        <!-- <h2 class="text-primary heading">Frequently Ask Questions</h2> -->
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="accordion block-8" id="accordion">
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseOnetwo"
+                                                        role="button" aria-expanded="true" style="text-align:left;"
+                                                        aria-controls="collapseOnetwo">What if I am not left with any
+                                                        cards
+                                                        in my hand after my turn?
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseOnetwo" class="collapse show"
+                                                    aria-labelledby="headingOne" data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">In this case the player has to declare when
+                                                            his/her turn comes back. If any other player also has zero
+                                                            points (the other player is holding a power card or joker)
+                                                            then both shall be termed as winners. This is only in case
+                                                            of zero points. In any other scenario the player declaring
+                                                            should have a point total lower than all other players.
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- .accordion-item -->
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseTwotwo"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapseTwotwo">What if I am left with joker
+                                                        card(s) or/and with one or more power cards?
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseTwotwo" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">In such a case as the point total of the
+                                                            player is zero, he/she may declare. This is the lowest point
+                                                            total a player can have in the game hence will never lose
+                                                            the game if he/she has the above mentioned cards.
+
+                                                        </p>
+
+
+                                                    </div>
+                                                </div>
+                                            </div> <!-- .accordion-item -->
+
+                                            <div class="accordion-item">
+                                                <h3 class="mb-0 heading">
+                                                    <a class="btn-block" data-toggle="collapse" href="#collapseThreetwo"
+                                                        role="button" aria-expanded="false" style="text-align:left;"
+                                                        aria-controls="collapseThreetwo">What if on declaration I have
+                                                        the same point total value as another player?
+
+                                                        <span class="icon"></span></a>
+                                                </h3>
+                                                <div id="collapseThreetwo" class="collapse" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="body-text">
+                                                        <p class="justify">The person who declared gets a penalty of 25
+                                                            points as he/she doesn’t have the lowest point total and the
+                                                            player with the lowest point total wins the game. If no
+                                                            player has a point total less than the player who declared,
+                                                            the player with point total equal to the player who declared
+                                                            wins the game.
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- .accordion-item -->
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                         <br><br>
-                </div><!-- col end -->
-            </div><!-- row end -->
-        </div><!-- container end --></div>
+                    </div><!-- col end -->
+                </div><!-- row end -->
+            </div><!-- container end -->
+        </div>
     </section><!-- about section end -->
 
 
@@ -274,7 +798,7 @@
                                 <p class="logo-p"> Developed &amp; Marketed by
                                     <br> ivak entertainment games llp<br>
                                     <br>Website Developed by: <br><a id="a"
-                                        href="http://rajatktakportfolio.000webhostapp.com/">Rajat Tak</a> & <a id="a"
+                                        href="https://rajatktak.github.io/MyPotrfolio/">Rajat Tak</a> & <a id="a"
                                         href="https://www.linkedin.com/in/dhananjaikalra/">Dhananjai Kalra</a>
 
                             </div>
@@ -390,6 +914,15 @@
     </script>
     <script src="js/5083-js-laxt.js">
     </script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- <script src="js/jquery.animateNumber.min.js"></script> -->
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
