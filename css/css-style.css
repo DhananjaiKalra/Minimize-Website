@@ -425,6 +425,13 @@ object {
 }
 
 .bg-img-about {
+  background-image: url('..//images/about.jpg');
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  background-size: cover;
+  background-position: bottom;
+}
+.bg-img-faq {
   background-image: url('..//images/bg1.jpg');
   background-repeat: no-repeat;
   /* height: 100vh; */
